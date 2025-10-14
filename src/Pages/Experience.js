@@ -10,7 +10,17 @@ const Experience = forwardRef(({projects, work}, ref) => {
       <p className='section'>Projects</p>
       <div className="cards-container">
       {projects.map ((proj, i) => 
-        <Expr title={proj.title} links={proj.links} image={`${process.env.PUBLIC_URL}${proj.image}`} date={proj.date} description={proj.description} langs={proj.languages} badges={proj.badges} key={i}  style={{ transitionDelay: `${i * 0.2}s` }}></Expr>)
+        <Expr
+          title={proj.title}
+          links={proj.links}
+          image={`${process.env.PUBLIC_URL}${proj.image}`}
+          date={proj.date}
+          description={proj.description}
+          langs={proj.languages}
+          badges={proj.badges}
+          key={i}
+          style={{ transitionDelay: `${i * 0.08}s` }}
+        ></Expr>)
       }</div>
       </div>
       <div className="work">
@@ -18,7 +28,17 @@ const Experience = forwardRef(({projects, work}, ref) => {
         <div className="cards-container">
 
       {work.map ((proj, i) => 
-        <Expr title={proj.title} links={proj.links} image={`${process.env.PUBLIC_URL}${proj.image}`} date={proj.date} description={proj.description} langs={proj.languages} badges={proj.badges} key={i} style={{ transitionDelay: `${(i * 0.2) + projects.length * 0.2}s` }}></Expr>)
+        <Expr
+          title={proj.title}
+          links={proj.links}
+          image={`${process.env.PUBLIC_URL}${proj.image}`}
+          date={proj.date}
+          description={proj.description}
+          langs={proj.languages}
+          badges={proj.badges}
+          key={i}
+          style={{ transitionDelay: `${i * 0.08}s` }}
+        ></Expr>)
       }</div>
             </div>
 

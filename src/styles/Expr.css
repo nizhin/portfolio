@@ -15,7 +15,7 @@
     position: relative;
     transform: translateX(-100%);
     opacity: 0;
-    transition: transform .8s ease-out, opacity .8s ease-out;
+    transition: transform .55s ease-out, opacity .55s ease-out;
 }
 .card-front{
   backface-visibility: hidden; 

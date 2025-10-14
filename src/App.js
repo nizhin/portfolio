@@ -16,13 +16,13 @@ function App() {
   const [darkMode, setDarkMode] = useState(window.matchMedia('(prefers-color-scheme: dark)').matches)
   useEffect(() => {
     if (page === "work" && workRef.current) {
-      workRef.current.scrollIntoView({ behavior: "smooth" });
+      workRef.current.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
     }
   }, [page]);
   const goToWork = () => {
 
     if (workRef.current) {
-      workRef.current.scrollIntoView({ behavior: "smooth" });
+      workRef.current.scrollIntoView({ behavior: "smooth", block: "start", inline: "nearest" });
     }
   };
   const dark_img_style = darkMode ? {

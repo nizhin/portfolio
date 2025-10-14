@@ -7,7 +7,7 @@ function AboutMe({setPage}) {
   };
   return (
     <div className="about-me">
-        
+
         <div className='intro'>
           <p className="title">👋 Hi, I'm Quenton Ni!</p>
           <p className="description"> I am a senior at the <strong>University of Minnesota - Twin Cities</strong>, pursuing a <strong>B.S. and Masters in Computer Science</strong>. </p>
@@ -16,9 +16,11 @@ function AboutMe({setPage}) {
             I've worked across research and teaching, from exploring 
             neural network quantization to guiding students through Java and machine learning fundamentals. My interests lie in <strong>machine learning</strong> and <strong>software development</strong>.</p>
           <br></br>
-          <p className="description">Here is my <b onClick={handleOpenPdf} style={{cursor: 'pointer'}}>resume</b> and some of there cool <b onClick={() =>{setPage("experience")}}  style={{cursor: 'pointer'}}>projects</b> I made.</p>
+          <p className="description">Here is my <b onClick={handleOpenPdf} style={{cursor: 'pointer'}}>resume</b> and some other cool <b onClick={() =>{setPage("work")}}  style={{cursor: 'pointer'}}>projects</b> I made.</p>
         </div>
-        <img className="portrait" src={`${process.env.PUBLIC_URL}/portrait.png`} alt="Me"></img>
+        <div className="portrait-frame">
+          <img className="portrait" src={`${process.env.PUBLIC_URL}/portrait.png`} alt="Quenton Ni portrait"></img>
+        </div>
     </div>
   );
 }
