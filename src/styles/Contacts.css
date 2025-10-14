@@ -1,0 +1,26 @@
+.contacts {
+    margin-left: 15px;
+}
+
+.title {
+    font-size: 40px;
+    font-weight: bold;
+    z-index: 0;
+}
+
+.email-link { 
+    color: inherit;
+    padding: 5px 10px 5px 10px;
+    text-decoration: none;
+    border-radius: 10px;
+    display: inline-block;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+.email-link:hover {
+    transform: scale(1.2); 
+    background-color: #e2beff;
+  }
+
+.contacts-intro {
+    margin-left: 10px;
+}

@@ -1,0 +1,85 @@
+[ {
+    "title": "Pokémon Type Classifier",
+    "links": [],
+    "image": "/pokemon.png",
+    "date": "2025",
+    "languages": ["Python", "PyTorch"],
+    "description": [
+      "Developed image classification models to predict Pokémon types using convolutional neural networks (CNNs) and Vision Transformers (ViTs) on a custom labeled dataset of Pokémon images.",
+      "Preprocessed and augmented over 1,000 images to improve model robustness and handle class imbalance.",
+      "Evaluated model performance using precision, recall, F1-score, and confusion matrices; refined hyperparameters to boost accuracy."
+    ]
+  },
+  {
+    "title": "Visual Transit Simulator",
+    "links": [],
+    "image": "/VTS.png",
+    "date": "2024",
+    "languages": ["Java"],
+    "description": [
+      "Contributed to the design, documentation, and implementation of a Visual Transit Simulator modeling vehicle and passenger behavior across routes.",
+      "Created UML class diagrams and Javadoc documentation while adhering to Google Java style guidelines.",
+      "Designed and executed unit tests to ensure robustness and compliance with project requirements."
+    ]
+  },
+  {
+    "title": "SQLite Clone",
+    "links": [],
+    "image": "/SQLite.png",
+    "date": "2024",
+    "languages": ["C"],
+    "description": [
+      "Developed a lightweight relational database inspired by SQLite, implementing core database functionalities in C.",
+      "Utilized a B-tree index structure to optimize query performance and minimize full table scans.",
+      "Engineered a custom storage format for data persistence, managing in-memory structures and disk I/O operations."
+    ]
+  },
+  {
+  "title": "Simple Retrieval-Augmented Generation (RAG) System",
+  "links": [],
+  "image": "/rag.jpg",
+  "date": "2024",
+  "languages": ["Python"],
+  "description": [
+    "Built a lightweight RAG pipeline integrating Ollama models for embedding and generation.",
+    "Implemented text chunk embedding, vector database storage, and cosine similarity search for context retrieval.",
+    "Combined retrieved context with a language model prompt to generate grounded responses."
+  ]
+  },
+  {
+  "title": "Multi-Threaded HTTP Server",
+  "links": [],
+  "image": "/server.svg",
+  "date": "2024",
+  "languages": ["C"],
+  "description": [
+ "Built an multi-threaded HTTP web server in C that handles multiple clients using a thread pool.",
+    "Implemented TCP socket setup, request parsing, and response generation for file retrieval.",
+    "Created a thread-safe queue for managing client connections and ensured clean server shutdown."
+  ]
+},
+{
+  "title": "Simple Working Implementation Shell (Swish)",
+  "links": [],
+  "image": "/swish.png",
+  "date": "2024",
+  "languages": ["C"],
+  "description": [
+    "Developed a simplified Unix shell supporting command execution, directory management, and I/O redirection.",
+    "Implemented process creation, signal handling, and job control using system calls like fork(), exec(), waitpid(), and sigaction().",
+    "Extended functionality to handle pipelines, enabling commands to communicate via pipes for parallel execution."
+  ]
+},
+{
+  "title": "Minitar",
+  "links": [],
+  "image": "/GNU.png",
+  "date": "2024",
+  "languages": ["C"],
+  "description": [
+    "Created a simplified Posix-compliant version of the tar utility using C and the stdio library.",
+    "Implemented archive creation, extraction, listing, and updating with proper 512-byte block formatting.",
+    "Handled file I/O, header metadata generation, and error checking for reliable archive operations."
+  ]
+}
+]

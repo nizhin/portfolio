@@ -1,0 +1,36 @@
+[
+  {
+    "title": "Research Assistant",
+    "links": [],
+    "image": "/umn.png",
+    "date": "September 2025 – Present",
+    "languages": ["Python"],
+    "description": [
+      "Conducted research on neural network quantization, exploring number representation schemes (e.g., fixed point, block floating point) to improve model efficiency.",
+      "Implement experiments in Python/PyTorch and review literature on quantization methods to support ongoing research."
+    ]
+  },
+  {
+    "title": "Computer Science Teaching Assistant",
+    "links": [],
+    "image": "/umn.png",
+    "date": "September 2024 – Present",
+    "languages": ["Java"],
+    "description": [
+      "Guided 400+ college students in learning concepts related to Java programming and data structures.",
+      "Held weekly office hours and coordinated weekly labs for 30+ students to reinforce hands-on coding skills.",
+      "Collaborated with faculty and other TAs to test assignments, projects, and exams, and refine the course curriculum."
+    ]
+  },
+  {
+    "title": "Machine Learning Teaching Assistant",
+    "links": [],
+    "image": "/dsi.png",
+    "date": "May 2025 – August 2025",
+    "languages": ["Python"],
+    "description": [
+      "Supported PhD-led instruction for 90+ high school seniors in the UMN DSI AI Explorers Summer Program.",
+      "Taught machine learning concepts such as neural networks, CNNs, transformers, and reinforcement learning using PyTorch and scikit-learn."
+    ]
+  }
+]
