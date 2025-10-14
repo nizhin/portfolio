@@ -3,6 +3,8 @@
     z-index: 0;
     margin-left: 5%;
     display: flex;
+    align-items: flex-start;
+    gap: 32px;
 }
 
 .title {
@@ -12,7 +14,7 @@
 }
 
 .intro {
-    width: 45%;
+    width: clamp(320px, 45%, 640px);
 }
 
 .intro p {
@@ -21,10 +23,44 @@
 
 .portrait {
     border-radius: 50%;
-    height: 250px;
-    width: 250px;
+    height: clamp(180px, 28vw, 260px);
+    width: clamp(180px, 28vw, 260px);
     margin-left: 40px;
     margin-top:40px;
     border: 5px solid rgb(210, 56, 210);
     border-width: 2px;
+}
+
+@media (max-width: 1024px) {
+    .about-me {
+        margin-left: 0;
+        padding: 0 12px;
+    }
+
+    .intro {
+        width: 60%;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-me {
+        flex-direction: column-reverse;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+        margin-left: 0;
+        padding: 0 8px;
+    }
+
+    .intro {
+        width: 100%;
+    }
+
+    .intro p {
+        text-align: left;
+    }
+
+    .portrait {
+        margin: 0;
+    }
 }

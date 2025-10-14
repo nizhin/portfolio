@@ -1,15 +1,122 @@
 
+.nav-bar {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.nav-links {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    margin-left: auto;
+}
+
 .nav-bar-button {
-    padding: 5px 10px 5px 10px;
-    margin-right: 5px;
+    padding: 6px 12px;
     border-radius: 10px;
     background-color: transparent;
     border: none;
     transition: transform 0.3s ease, background-color 0.3s ease;
-    color: inherit; 
+    color: inherit;
+    font-size: 1rem;
+    cursor: pointer;
+    display: inline-flex;
+    align-items: center;
 }
 
-.nav-bar-button:hover {
+.nav-bar-brand {
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.nav-bar-button:hover,
+.nav-bar-button:focus-visible {
     background-color: #e2beff;
-    transform: scale(1.2);
+    transform: scale(1.05);
+    outline: none;
+}
+
+.nav-toggle {
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    width: 42px;
+    height: 38px;
+    border-radius: 10px;
+    border: 1px solid transparent;
+    background-color: transparent;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.nav-toggle:hover,
+.nav-toggle:focus-visible {
+    background-color: rgba(226, 190, 255, 0.25);
+    border-color: #e2beff;
+    outline: none;
+}
+
+.nav-toggle-line {
+    width: 22px;
+    height: 2px;
+    border-radius: 999px;
+    background-color: currentColor;
+    transition: transform 0.3s ease;
+}
+
+.nav-toggle--open .nav-toggle-line:nth-child(1) {
+    transform: translateY(6px) rotate(45deg);
+}
+
+.nav-toggle--open .nav-toggle-line:nth-child(2) {
+    opacity: 0;
+}
+
+.nav-toggle--open .nav-toggle-line:nth-child(3) {
+    transform: translateY(-6px) rotate(-45deg);
+}
+
+.nav-links--visible {
+    display: flex;
+}
+
+@media (max-width: 1024px) {
+    .nav-bar {
+        flex-wrap: wrap;
+    }
+}
+
+@media (max-width: 768px) {
+    .nav-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        width: 100%;
+        gap: 6px;
+    }
+
+    .nav-toggle {
+        display: inline-flex;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 8px;
+        padding: 4px 0 8px;
+        margin-left: 0;
+    }
+
+    .nav-links--visible {
+        display: flex;
+    }
+
+    .nav-bar-button {
+        width: 100%;
+        justify-content: flex-start;
+    }
 }

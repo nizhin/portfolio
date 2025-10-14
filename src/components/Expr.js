@@ -1,9 +1,58 @@
-import {React, useState, useEffect} from 'react'
+import {React, useState, useEffect, useMemo} from 'react'
 import '../styles/Expr.css';
 
+const normalizeBadge = (badge) => {
+  if (typeof badge === 'string') {
+    return { label: badge, variant: 'neutral' };
+  }
 
-function Expr({title, links, image, date, description, langs, style}) {
+  if (!badge || typeof badge !== 'object') {
+    return null;
+  }
+
+  const label = typeof badge.label === 'string' ? badge.label.trim() : '';
+  if (!label) {
+    return null;
+  }
+
+  const variant = typeof badge.variant === 'string' && badge.variant.trim()
+    ? badge.variant.trim()
+    : 'neutral';
+
+  return { label, variant };
+};
+
+const buildBadgeList = (badgesProp = [], langs = []) => {
+  const items = [];
+  const seen = new Set();
+
+  const addBadge = (badge) => {
+    const normalized = normalizeBadge(badge);
+    if (!normalized) {
+      return;
+    }
+    const key = normalized.label.toLowerCase();
+    if (seen.has(key)) {
+      return;
+    }
+    seen.add(key);
+    items.push(normalized);
+  };
+
+  badgesProp.forEach(addBadge);
+
+  if (items.length === 0) {
+    langs.forEach((lang) => addBadge({ label: lang, variant: 'neutral' }));
+  }
+
+  return items;
+};
+function Expr({title, links, image, date, description, langs = [], badges: badgeProp = [], style}) {
   const [isVisible, setIsVisible] = useState(false);
+
+  const badges = useMemo(() => {
+    return buildBadgeList(badgeProp, langs);
+  }, [badgeProp, langs]);
 
   useEffect(() => {
     setIsVisible(true); 
@@ -18,12 +67,20 @@ function Expr({title, links, image, date, description, langs, style}) {
               <p className='project-date'>{date}</p>
               <div className='project-description-container'>
                 {description.map((desc, i) => 
-                  <p className='project-description'>{desc}</p>
+                  <p className='project-description' key={`desc-${i}`}>{desc}</p>
                 )}
               </div>
-              {langs.map((lang, i) =>
-                <p className='proj-langs' key={i}>{lang}</p>
-              )}
+              <div className='project-badges' aria-label='Key skills' role='list'>
+                {badges.map(({ label, variant }, i) => (
+                  <span
+                    className={`proj-badge ${variant ? `proj-badge--${variant}` : ''}`.trim()}
+                    role='listitem'
+                    key={`badge-${i}`}
+                  >
+                    {label}
+                  </span>
+                ))}
+              </div>
               {links.length === 0 ? "" : "|"}
               {links.map((link, i) => 
                 <a className='project-link' key = {i} href={link[1]} target="_blank" rel="noreferrer">{link[0]}</a>

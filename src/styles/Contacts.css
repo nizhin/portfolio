@@ -1,9 +1,11 @@
+
 .contacts {
     margin-left: 15px;
+    max-width: 720px;
 }
 
 .title {
-    font-size: 40px;
+    font-size: clamp(28px, 5vw, 40px);
     font-weight: bold;
     z-index: 0;
 }
@@ -23,4 +25,16 @@
 
 .contacts-intro {
     margin-left: 10px;
+}
+
+@media (max-width: 768px) {
+    .contacts {
+        margin: 0;
+        padding: 0 12px;
+    }
+
+    .contacts-intro,
+    .email-link {
+        margin-left: 0;
+    }
 }

@@ -1,7 +1,8 @@
 .project {
     perspective: 1000px;
-    width: 40%;
-    padding: 10px;
+    flex: 1 1 clamp(260px, 45%, 420px);
+    max-width: 480px;
+    padding: 12px;
     margin: 10px;
     display: flex;
     transition: transform 0.5s ease, color 0.5s ease;
@@ -10,6 +11,7 @@
 }
 .card {
     display: flex;
+    gap: 12px;
     position: relative;
     transform: translateX(-100%);
     opacity: 0;
@@ -40,9 +42,10 @@
 
 
 .section {
-    font-size: 40px;
+    font-size: clamp(28px, 5vw, 40px);
     font-weight: bold;
     z-index: 0;
+    margin: 0 0 16px;
 }
 
 .project-link {
@@ -60,8 +63,8 @@
 }
 
 .project-image {
-    height: 140px;
-    width: 140px;
+    height: clamp(108px, 18vw, 140px);
+    width: clamp(108px, 18vw, 140px);
 }
 
 .project-title {
@@ -88,8 +91,106 @@
 
 }
 
-.proj-langs {
-    padding: 5px 10px 5px 10px;
-    display: inline-block;
-    margin-top:0;
+.project-badges {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+    padding: 8px 0 4px;
+}
+
+.proj-badge {
+    --badge-bg: rgba(211, 130, 255, 0.18);
+    --badge-border: rgba(211, 130, 255, 0.4);
+    --badge-color: inherit;
+    padding: 4px 10px;
+    border-radius: 999px;
+    background: var(--badge-bg);
+    border: 1px solid var(--badge-border);
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    color: var(--badge-color);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    gap: 4px;
+}
+
+.proj-badge:hover,
+.proj-badge:focus-visible {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+    outline: none;
+}
+
+.proj-badge--ml {
+    --badge-bg: rgba(89, 129, 255, 0.16);
+    --badge-border: rgba(89, 129, 255, 0.42);
+}
+
+.proj-badge--teaching {
+    --badge-bg: rgba(255, 196, 0, 0.2);
+    --badge-border: rgba(255, 196, 0, 0.42);
+}
+
+.proj-badge--research {
+    --badge-bg: rgba(0, 184, 212, 0.18);
+    --badge-border: rgba(0, 184, 212, 0.45);
+}
+
+.proj-badge--systems {
+    --badge-bg: rgba(255, 82, 82, 0.18);
+    --badge-border: rgba(255, 82, 82, 0.45);
+}
+
+.proj-badge--backend {
+    --badge-bg: rgba(255, 138, 101, 0.2);
+    --badge-border: rgba(255, 138, 101, 0.45);
+}
+
+.proj-badge--frontend {
+    --badge-bg: rgba(244, 143, 177, 0.18);
+    --badge-border: rgba(244, 143, 177, 0.42);
+}
+
+.proj-badge--neutral {
+    --badge-bg: rgba(120, 120, 140, 0.18);
+    --badge-border: rgba(120, 120, 140, 0.35);
+}
+
+@media (max-width: 1024px) {
+    .project {
+        flex: 1 1 clamp(280px, 100%, 420px);
+    }
+}
+
+@media (max-width: 768px) {
+    .project {
+        flex: 1 1 100%;
+        max-width: 100%;
+        margin: 8px 0;
+        padding: 12px 8px;
+    }
+
+    .card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .project-info {
+        padding: 8px 0 0;
+    }
+
+    .project-title {
+        font-size: 18px;
+    }
+
+    .project-description {
+        font-size: 14px;
+    }
+
+    .project-badges {
+        gap: 6px;
+    }
 }

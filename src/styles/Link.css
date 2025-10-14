@@ -22,3 +22,15 @@
     align-items: flex-end;
     color: inherit; 
 }
+
+@media (max-width: 768px) {
+    .link-container {
+        align-items: flex-start;
+        margin-right: 0;
+    }
+
+    .link {
+        align-items: center;
+        gap: 8px;
+    }
+}

@@ -4,6 +4,12 @@
     "image": "/pokemon.png",
     "date": "2025",
     "languages": ["Python", "PyTorch"],
+    "badges": [
+      {"label": "Python", "variant": "ml"},
+      {"label": "PyTorch", "variant": "ml"},
+      {"label": "Machine Learning", "variant": "ml"},
+      {"label": "Computer Vision", "variant": "ml"}
+    ],
     "description": [
       "Developed image classification models to predict Pokémon types using convolutional neural networks (CNNs) and Vision Transformers (ViTs) on a custom labeled dataset of Pokémon images.",
       "Preprocessed and augmented over 1,000 images to improve model robustness and handle class imbalance.",
@@ -16,6 +22,11 @@
     "image": "/VTS.png",
     "date": "2024",
     "languages": ["Java"],
+    "badges": [
+      {"label": "Java", "variant": "backend"},
+      {"label": "Software Design", "variant": "backend"},
+      {"label": "OOP", "variant": "backend"}
+    ],
     "description": [
       "Contributed to the design, documentation, and implementation of a Visual Transit Simulator modeling vehicle and passenger behavior across routes.",
       "Created UML class diagrams and Javadoc documentation while adhering to Google Java style guidelines.",
@@ -28,6 +39,11 @@
     "image": "/SQLite.png",
     "date": "2024",
     "languages": ["C"],
+    "badges": [
+      {"label": "C", "variant": "systems"},
+      {"label": "Databases", "variant": "backend"},
+      {"label": "Systems Programming", "variant": "systems"}
+    ],
     "description": [
       "Developed a lightweight relational database inspired by SQLite, implementing core database functionalities in C.",
       "Utilized a B-tree index structure to optimize query performance and minimize full table scans.",
@@ -40,6 +56,12 @@
   "image": "/rag.jpg",
   "date": "2024",
   "languages": ["Python"],
+  "badges": [
+    {"label": "Python", "variant": "ml"},
+    {"label": "PyTorch", "variant": "ml"},
+    {"label": "Embeddings", "variant": "ml"}
+    
+  ],
   "description": [
     "Built a lightweight RAG pipeline integrating Ollama models for embedding and generation.",
     "Implemented text chunk embedding, vector database storage, and cosine similarity search for context retrieval.",
@@ -52,6 +74,12 @@
   "image": "/server.svg",
   "date": "2024",
   "languages": ["C"],
+  "badges": [
+    {"label": "C", "variant": "systems"},
+    {"label": "Multi-threading", "variant": "systems"},
+    {"label": "Networking", "variant": "systems"},
+    {"label": "Systems Programming", "variant": "systems"}
+  ],
   "description": [
  "Built an multi-threaded HTTP web server in C that handles multiple clients using a thread pool.",
     "Implemented TCP socket setup, request parsing, and response generation for file retrieval.",
@@ -64,6 +92,12 @@
   "image": "/swish.png",
   "date": "2024",
   "languages": ["C"],
+  "badges": [
+     {"label": "C", "variant": "systems"},
+    {"label": "Shell", "variant": "systems"},
+    {"label": "Job Control", "variant": "systems"},
+     {"label": "Systems Programming", "variant": "systems"}
+  ],
   "description": [
     "Developed a simplified Unix shell supporting command execution, directory management, and I/O redirection.",
     "Implemented process creation, signal handling, and job control using system calls like fork(), exec(), waitpid(), and sigaction().",
@@ -76,6 +110,11 @@
   "image": "/GNU.png",
   "date": "2024",
   "languages": ["C"],
+  "badges": [
+    {"label": "C", "variant": "systems"},
+    {"label": "Archiving", "variant": "systems"},
+    {"label": "Systems Programming", "variant": "systems"}
+  ],
   "description": [
     "Created a simplified Posix-compliant version of the tar utility using C and the stdio library.",
     "Implemented archive creation, extraction, listing, and updating with proper 512-byte block formatting.",

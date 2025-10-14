@@ -1,11 +1,7 @@
 
-.projects {
-    display: grid;
-    margin: 10px;
-}
-
 .app {
-    padding: 10px;
+    padding: 16px 32px;
+    overflow-x: hidden;
     min-height: 100vh;
 }
 
@@ -25,11 +21,15 @@
 
 .links {
     display: flex;
-    
+    gap: 12px;
+    align-items: center;
+    flex-wrap: wrap;
 }
 .header {
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    gap: 16px;
 }
 
 .mode-toggle {
@@ -48,4 +48,46 @@
 .dark-mode:hover {
     content: url('/public/light_mode2.png'); 
     transform: scale(1.2);
+}
+
+@media (max-width: 1024px) {
+    .app {
+        padding: 16px 24px;
+    }
+}
+
+@media (max-width: 768px) {
+    .app {
+        padding: 16px;
+    }
+
+    .header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 12px;
+    }
+
+    .links {
+        justify-content: flex-start;
+        width: 100%;
+    }
+
+    .tabs {
+        min-height: auto;
+        margin-top: 8px;
+    }
+}
+
+@media (max-width: 480px) {
+    .links {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        width: 100%;
+    }
+
+    .links .link-container {
+        width: 100%;
+        align-items: flex-start;
+    }
 }

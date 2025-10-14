@@ -5,6 +5,12 @@
     "image": "/umn.png",
     "date": "September 2025 – Present",
     "languages": ["Python"],
+    "badges": [
+      {"label": "Research", "variant": "research"},
+      {"label": "Quantization", "variant": "ml"},
+      {"label": "Python", "variant": "ml"},
+      {"label": "PyTorch", "variant": "ml"}
+    ],
     "description": [
       "Conducted research on neural network quantization, exploring number representation schemes (e.g., fixed point, block floating point) to improve model efficiency.",
       "Implement experiments in Python/PyTorch and review literature on quantization methods to support ongoing research."
@@ -16,6 +22,11 @@
     "image": "/umn.png",
     "date": "September 2024 – Present",
     "languages": ["Java"],
+    "badges": [
+      {"label": "Teaching", "variant": "teaching"},
+      {"label": "Java", "variant": "backend"},
+      {"label": "Data Structures", "variant": "backend"}
+    ],
     "description": [
       "Guided 400+ college students in learning concepts related to Java programming and data structures.",
       "Held weekly office hours and coordinated weekly labs for 30+ students to reinforce hands-on coding skills.",
@@ -28,6 +39,11 @@
     "image": "/dsi.png",
     "date": "May 2025 – August 2025",
     "languages": ["Python"],
+    "badges": [
+      {"label": "Teaching", "variant": "teaching"},
+      {"label": "Machine Learning", "variant": "ml"},
+      {"label": "Python", "variant": "ml"}
+    ],
     "description": [
       "Supported PhD-led instruction for 90+ high school seniors in the UMN DSI AI Explorers Summer Program.",
       "Taught machine learning concepts such as neural networks, CNNs, transformers, and reinforcement learning using PyTorch and scikit-learn."
