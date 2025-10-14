@@ -17,10 +17,10 @@ function NavBar({ setPage, goToWork }) {
 
   const handleNavigation = (nextPage, callback) => {
     setPage(nextPage);
-    if (callback) {
-      callback();
-    }
     setIsMenuOpen(false);
+    if (callback) {
+      setTimeout(callback, 60);
+    }
   };
 
   return (
