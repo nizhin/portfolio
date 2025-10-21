@@ -64,7 +64,17 @@ function Expr({title, links, image, date, description, langs = [], badges: badge
           <img className='project-image' src={image ? image : ''} alt = ''></img>
           <div className='project-info'>    
               <p className="project-title">{title}</p>
-              <p className='project-date'>{date}</p>
+              <div className='project-date-and-links'>
+                <span className='project-date'>{date}</span>
+                {links.length > 0 && (
+                  <>
+                    {links.map((link, i) => {
+                      const href = link[1].startsWith('http') ? link[1] : `${process.env.PUBLIC_URL}${link[1]}`;
+                      return <a className='project-link' key = {i} href={href} target="_blank" rel="noreferrer">{link[0]}</a>
+                    })}
+                  </>
+                )}
+              </div>
               <div className='project-description-container'>
                 {description.map((desc, i) => 
                   <p className='project-description' key={`desc-${i}`}>{desc}</p>
@@ -81,10 +91,6 @@ function Expr({title, links, image, date, description, langs = [], badges: badge
                   </span>
                 ))}
               </div>
-              {links.length === 0 ? "" : "|"}
-              {links.map((link, i) => 
-                <a className='project-link' key = {i} href={link[1]} target="_blank" rel="noreferrer">{link[0]}</a>
-              )}
               </div>
             </div>
           </div>

@@ -1,6 +1,24 @@
 [ {
+    "title": "Nap Finder",
+    "links": [["NapFinder", "https://napfinder.onrender.com/"]],
+    "image": "/napfinder.png",
+    "date": "2025",
+    "badges": [
+      {"label": "Python", "variant": "backend"},
+      {"label": "Flask", "variant": "backend"},
+      {"label": "PostgresSQL", "variant": "backend"},
+      {"label": "HTML/CSS", "variant": "frontend"}
+      
+    ],
+    "description": [
+      "Engineered a scalable CRUD API for locations, reviews, and users, featuring data aggregation for average ratings.",
+      "Implemented an interactive map view with dynamic pins that navigate users to pre-filtered detail pages for specific nap spot locations.",
+      "Developed comprehensive spot detail pages displaying dynamic building information, user reviews, and specific access requirements."
+    ]
+  },
+  {
     "title": "Pokémon Type Classifier",
-    "links": [],
+    "links": [["Project Report", "/pokemon_report.pdf"]],
     "image": "/pokemon.png",
     "date": "2025",
     "languages": ["Python", "PyTorch"],

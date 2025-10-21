@@ -16,7 +16,8 @@ function AboutMe({setPage}) {
             I've worked across research and teaching, from exploring 
             neural network quantization to guiding students through Java and machine learning fundamentals. My interests lie in <strong>machine learning</strong> and <strong>software development</strong>.</p>
           <br></br>
-          <p className="description">Here is my <u><b onClick={handleOpenPdf} style={{cursor: 'pointer'}}>resume</b></u> and some other cool <u><b onClick={() =>{setPage("work")}}  style={{cursor: 'pointer'}}>projects</b></u> I made.</p>
+          <p className="description">Check out my <u><b onClick={handleOpenPdf} style={{cursor: 'pointer'}}>resume</b></u>!</p>
+          <p className="description">View some of my <u><b onClick={() =>{setPage("work")}}  style={{cursor: 'pointer'}}>projects</b></u>.</p>
         </div>
         <div className="portrait-frame">
           <img className="portrait" src={`${process.env.PUBLIC_URL}/portrait.png`} alt="Quenton Ni portrait"></img>
