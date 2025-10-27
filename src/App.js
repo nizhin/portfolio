@@ -6,6 +6,7 @@ import AboutMe from './Pages/AboutMe';
 import Contact from './Pages/Contact'
 import NavBar from './components/NavBar';
 import Link from './components/Link'
+import Footer from './components/Footer';
 import ProjectData from './data/projects.json';
 import WorkData from './data/work.json'
 import StarsCanvas from './components/Stars';
@@ -80,6 +81,8 @@ function App() {
       ) : (
         <Contact />
       )}
+      
+      <Footer setPage={setPage} />
       </div>
     </div>
   );

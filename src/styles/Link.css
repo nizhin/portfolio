@@ -6,14 +6,16 @@
     display: flex;
     flex-direction: column;
     align-items: flex-end;
-    transition: transform 0.3s ease, background-color 0.3s ease;
+    background-color: transparent;
+    border: 2px solid transparent;
+    transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease;
 }
 
 .link-container:hover {
-    background-color: #e2beff;
-    transform: scale(1.2);
-    
-
+    background-color: rgba(226, 190, 255, 0.25);
+    border-color: rgba(226, 190, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(226, 190, 255, 0.3);
 }
 
 .link {

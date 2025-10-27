@@ -11,7 +11,7 @@
       
     ],
     "description": [
-      "Engineered a scalable CRUD API for locations, reviews, and users, featuring data aggregation for average ratings.",
+      "Engineered a CRUD API for locations, reviews, and users, featuring data aggregation for average ratings.",
       "Implemented an interactive map view with dynamic pins that navigate users to pre-filtered detail pages for specific nap spot locations.",
       "Developed comprehensive spot detail pages displaying dynamic building information, user reviews, and specific access requirements."
     ]

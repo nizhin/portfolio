@@ -17,7 +17,7 @@ function AboutMe({setPage}) {
             neural network quantization to guiding students through Java and machine learning fundamentals. My interests lie in <strong>machine learning</strong> and <strong>software development</strong>.</p>
           <br></br>
           <p className="description">Check out my <u><b onClick={handleOpenPdf} style={{cursor: 'pointer'}}>resume</b></u>!</p>
-          <p className="description">View some of my <u><b onClick={() =>{setPage("work")}}  style={{cursor: 'pointer'}}>projects</b></u>.</p>
+          <p className="description">View some of my <u><b onClick={() =>{setPage("experience")}}  style={{cursor: 'pointer'}}>projects</b></u>.</p>
         </div>
         <div className="portrait-frame">
           <img className="portrait" src={`${process.env.PUBLIC_URL}/portrait.png`} alt="Quenton Ni portrait"></img>

@@ -24,7 +24,7 @@ const Experience = forwardRef(({projects, work}, ref) => {
       }</div>
       </div>
       <div className="work">
-        <p className='section' ref={ref}>Work</p>
+        <p className='section' ref={ref}>Experience</p>
         <div className="cards-container">
 
       {work.map ((proj, i) => 

@@ -47,7 +47,7 @@ function NavBar({ setPage, goToWork }) {
           Projects
         </button>
         <button className='nav-bar-button' onClick={() => handleNavigation('work', goToWork)}>
-          Work
+          Experience
         </button>
         <button className='nav-bar-button' onClick={() => handleNavigation('contact')}>
           Contact Me
