@@ -1,5 +1,22 @@
 [
   {
+    "title": "Software Engineer (Capstone)",
+    "links": [],
+    "image": "/medtronic.jpeg",
+    "date": "September 2025 – Present",
+    "languages": ["Python"],
+    "badges": [
+      {"label": "Agile", "variant": "process"},
+      {"label": "Requirements", "variant": "process"},
+      {"label": "Software Development", "variant": "backend"}
+    ],
+    "description": [
+      "Partnering with Medtronic engineers in a year-long academic–industry collaboration to design, implement, and test a software solution in the medical technology domain.",
+      "Define project scope, document system specifications, and ensure all design components comply with industry and regulatory standards.",
+      "Contribute to the full Agile development lifecycle, including architecture design, coding, testing, and peer code reviews."
+    ]
+  },
+  {
     "title": "Research Assistant",
     "links": [],
     "image": "/umn.png",
