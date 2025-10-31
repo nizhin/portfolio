@@ -1,7 +1,9 @@
 .stars-canvas {
     width: 100%;
-    height: inherit;
-    position: absolute;
+    height: 100vh;
+    position: fixed;
+    /* height:inherit;
+    position:absolute; */
     top: 0;
     right: 0;
     bottom: 0;
