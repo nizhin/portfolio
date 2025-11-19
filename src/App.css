@@ -1,4 +1,14 @@
 
+:root {
+    --bg-color: #f7f7f1;
+    --text-color: black;
+}
+
+[data-theme='dark'] {
+    --bg-color: #313338;
+    --text-color: #f7f7f1;
+}
+
 .app {
     padding: 16px 32px 0;
     overflow-x: hidden;
@@ -6,6 +16,9 @@
     display: flex;
     flex-direction: column;
     box-sizing: border-box;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 .star-contain {
