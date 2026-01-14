@@ -1,4 +1,22 @@
 [ {
+    "title": "Gamblr",
+    "links": [["gamblr", "https://gamblr-16a50.firebaseapp.com/"]],
+    "image": "/gamblr.png",
+    "date": "2025",
+    "badges": [
+      {"label": "Firebase", "variant": "backend"},
+      {"label": "Vue", "variant": "frontend"},
+      {"label": "PrimeVue", "variant": "frontend"},
+      {"label": "Vuefire", "variant": "frontend"},
+      {"label": "Three.js", "variant": "frontend"}
+    ],
+    "description": [
+      "Developed a full-stack web application for tracking gambling habits with real time data synchronization using Firestore NoSQL database.",
+      "Built a fully customizable drag and drop dashboard allowing users to personalize their workspace with interactive widgets for data visualization and spending analysis.",
+      "Implemented voice transcription for visit notes using Google Cloud Speech to Text API integrated with Firebase Functions and created a practice mode featuring a Three.js 3D slot machine simulation."
+    ]
+  },
+  {
     "title": "Nap Finder",
     "links": [["NapFinder", "https://napfinder.onrender.com/"]],
     "image": "/napfinder.png",

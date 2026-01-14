@@ -7,7 +7,7 @@ function Footer({ setPage }) {
       <div className="footer-content">
         <div className="footer-section footer-info">
           <p className="footer-copyright">Quenton Ni</p>
-          <p className="footer-updated">Last updated: October 2025</p>
+          <p className="footer-updated">Last updated: January 2026</p>
         </div>
       </div>
     </footer>
