@@ -11,7 +11,7 @@
       {"label": "Software Development", "variant": "backend"}
     ],
     "description": [
-      "Partnering with Medtronic engineers in a year-long academic–industry collaboration to design, implement, and test a software solution in the medical technology domain.",
+      "Partnering with Medtronic engineers in a year-long academic industry collaboration to design, implement, and test a software solution in the medical technology domain.",
       "Define project scope, document system specifications, and ensure all design components comply with industry and regulatory standards.",
       "Contribute to the full Agile development lifecycle, including architecture design, coding, testing, and peer code reviews."
     ]
@@ -29,8 +29,9 @@
       {"label": "PyTorch", "variant": "ml"}
     ],
     "description": [
+      "Initiating research into audio deepfake detection by analyzing state-of-the-art synthetic speech models and exploring acoustic feature extraction techniques to identify artifacts in AI generated audio.",
       "Conducted research on neural network quantization, exploring number representation schemes (e.g., fixed point, block floating point) to improve model efficiency.",
-      "Implement experiments in Python/PyTorch and review literature on quantization methods to support ongoing research."
+      "Implemented experiments in Python/PyTorch and review literature on quantization methods to support ongoing research."
     ]
   },
   {
@@ -45,7 +46,7 @@
       {"label": "Data Structures", "variant": "backend"}
     ],
     "description": [
-      "Guided 400+ college students in learning concepts related to Java programming and data structures.",
+      "Facilitate the education of 400+ students in courses ranging from Java based data structures to C systems programming and x86-64 assembly by holding weekly office hours, and testing course content for assignments, and exams.",
       "Held weekly office hours and coordinated weekly labs for 30+ students to reinforce hands-on coding skills.",
       "Collaborated with faculty and other TAs to test assignments, projects, and exams, and refine the course curriculum."
     ]
