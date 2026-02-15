@@ -17,6 +17,24 @@
     ]
   },
   {
+    "title": "DaeTrace",
+    "links": [["DaeTrace", "https://daetrace1.web.app/"]],
+    "image": "/daetrace.png",
+    "date": "2026",
+    "badges": [
+      {"label": "Firebase", "variant": "backend"},
+      {"label": "Vue", "variant": "frontend"},
+      {"label": "PrimeVue", "variant": "frontend"},
+      {"label": "Vuefire", "variant": "frontend"},
+      {"label": "Manifest V3", "variant": "frontend"}
+    ],
+    "description": [
+      "Architected and built a full-stack productivity tracking system using a Chrome Extension (Manifest V3) and Firebase, capturing real-time tab activity and persisting normalized domain level usage logs to Firestore.",
+      "Designed scalable data models for user activity, session metadata, and domain categorization.",
+      "Implemented session state management and dynamic domain-blocking logic, leveraging Firestore real-time listeners to synchronize data consistently between the extension and web dashboard."
+    ]
+  },
+  {
     "title": "Nap Finder",
     "links": [["NapFinder", "https://napfinder.onrender.com/"]],
     "image": "/napfinder.png",
