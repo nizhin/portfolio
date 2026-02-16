@@ -1,4 +1,20 @@
-[ {
+[   {
+    "title": "DaeTrace",
+    "links": [["GitHub","https://github.com/nizhin/daetrace.git"]],
+    "image": "/daetrace.png",
+    "date": "2026",
+    "badges": [
+      {"label": "Firebase", "variant": "backend"},
+      {"label": "Vue", "variant": "frontend"},
+      {"label": "Manifest V3", "variant": "frontend"}
+    ],
+    "description": [
+      "Architected and built a full-stack productivity tracking system using a Chrome Extension (Manifest V3) and Firebase for MinneHack 2026.",
+      "Designed scalable data models for user activity, session metadata, and domain categorization.",
+      "Implemented session state management and dynamic domain-blocking logic, leveraging Firestore real-time listeners to synchronize data consistently between the extension and web dashboard."
+    ]
+  },
+  {
     "title": "Gamblr",
     "links": [["gamblr", "https://gamblr-16a50.firebaseapp.com/"]],
     "image": "/gamblr.png",
@@ -14,24 +30,6 @@
       "Developed a full-stack web application for tracking gambling habits with real time data synchronization using Firestore NoSQL database.",
       "Built a fully customizable drag and drop dashboard allowing users to personalize their workspace with interactive widgets for data visualization and spending analysis.",
       "Implemented voice transcription for visit notes using Google Cloud Speech to Text API integrated with Firebase Functions and created a practice mode featuring a Three.js 3D slot machine simulation."
-    ]
-  },
-  {
-    "title": "DaeTrace",
-    "links": [["DaeTrace", "https://daetrace1.web.app/"]],
-    "image": "/daetrace.png",
-    "date": "2026",
-    "badges": [
-      {"label": "Firebase", "variant": "backend"},
-      {"label": "Vue", "variant": "frontend"},
-      {"label": "PrimeVue", "variant": "frontend"},
-      {"label": "Vuefire", "variant": "frontend"},
-      {"label": "Manifest V3", "variant": "frontend"}
-    ],
-    "description": [
-      "Architected and built a full-stack productivity tracking system using a Chrome Extension (Manifest V3) and Firebase, capturing real-time tab activity and persisting normalized domain level usage logs to Firestore.",
-      "Designed scalable data models for user activity, session metadata, and domain categorization.",
-      "Implemented session state management and dynamic domain-blocking logic, leveraging Firestore real-time listeners to synchronize data consistently between the extension and web dashboard."
     ]
   },
   {
