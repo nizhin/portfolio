@@ -1,4 +1,20 @@
-[   {
+[ {
+    "title": "Neural Network Compression for Ventricular Arrhythmia Detection",
+    "links": [["Poster", "/tinyml.pdf"]],
+    "image": "/ekg.png",
+    "date": "2026",
+    "badges": [
+      {"label": "TinyML", "variant": "ml"},
+      {"label": "Model Compression", "variant": "ml"},
+      {"label": "Quantization", "variant": "ml"}
+    ],
+    "description": [
+    "Optimized a deep learning model for cardiac arrhythmia detection tailored for resource constrained microcontrollers.",
+    "Compressed model size by implementing Depthwise Separable Convolutions, BatchNorm folding, and Quantization Aware Training (QAT).",
+    "Evaluated tradeoffs across INT8, INT4, and INT2 bit widths to identify the viable precision for accurate classification."
+    ]
+  },   
+{
     "title": "DaeTrace",
     "links": [["GitHub","https://github.com/nizhin/daetrace.git"]],
     "image": "/daetrace.png",
