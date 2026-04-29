@@ -1,4 +1,18 @@
 [ {
+    "title": "Multi-Dialect Vietnamese Text to Speech",
+    "links": [["Poster", "/viet_tts.pdf"]],
+    "image": "/viet_tts.png",
+    "date": "2026",
+    "badges": [
+      {"label": "TinyML", "variant": "ml"},
+      {"label": "TTS", "variant": "ml"}
+    ],
+    "description": [
+      "Fine tuned a 335M-parameter Diffusion Transformer (F5-TTS) for Multi-Dialect Vietnamese text to speech",
+      "Extended the model's character embedding layer to support Vietnamese and trained on a customized dataset"
+    ]
+ },     
+{
     "title": "Neural Network Compression for Ventricular Arrhythmia Detection",
     "links": [["Poster", "/tinyml.pdf"]],
     "image": "/ekg.png",
