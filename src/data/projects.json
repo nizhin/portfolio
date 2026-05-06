@@ -1,15 +1,17 @@
 [ {
     "title": "Multi-Dialect Vietnamese Text to Speech",
-    "links": [["Poster", "/viet_tts.pdf"]],
+    "links": [["Poster", "/viet_tts.pdf"], ["Report", "/tts_report.pdf"],["Webpage","https://vybuin.github.io/viet_tts_project/"]],
     "image": "/viet_tts.png",
     "date": "2026",
     "badges": [
-      {"label": "TinyML", "variant": "ml"},
-      {"label": "TTS", "variant": "ml"}
+      {"label": "NLP", "variant": "ml"},
+      {"label": "F5-TTS", "variant": "ml"}
+      
     ],
     "description": [
-      "Fine tuned a 335M-parameter Diffusion Transformer (F5-TTS) for Multi-Dialect Vietnamese text to speech",
-      "Extended the model's character embedding layer to support Vietnamese and trained on a customized dataset"
+      "Fine-tuned and evaluated a multi-dialect Vietnamese TTS system using F5-TTS on ~71 hours of dialect-annotated speech across Northern, Central, and Southern Vietnamese.",
+      "Designed evaluation workflow using WER, MOS, and qualitative error analysis to measure speech intelligibility, naturalness, and dialect preservation across training checkpoints.",
+      "Built and presented an interactive Gradio demo for dialect-controlled Vietnamese speech synthesis with generated audio playback and mel spectrogram visualization."
     ]
  },     
 {
