@@ -13,7 +13,25 @@
       "Designed evaluation workflow using WER, MOS, and qualitative error analysis to measure speech intelligibility, naturalness, and dialect preservation across training checkpoints.",
       "Built and presented an interactive Gradio demo for dialect-controlled Vietnamese speech synthesis with generated audio playback and mel spectrogram visualization."
     ]
- },     
+ },  
+ {
+  "title": "Distributed Auction Marketplace System",
+  "links": [
+    ["Report", "/distributed_marketplace_report.pdf"]
+  ],
+  "image": "/distributed.png",
+  "date": "2026",
+  "badges": [
+    {"label": "Distributed Systems", "variant": "backend"},
+    {"label": "Docker", "variant": "backend"},
+    {"label": "gRPC", "variant": "backend"}
+  ],
+  "description": [
+    "Built a container based distributed auction marketplace using Docker Compose, with a centralized controller, stateless service nodes, and replicated SQLite backed storage nodes.",
+    "Implemented primary-backup replication with controller managed health checks and automatic primary failover to maintain availability during storage node failures.",
+    "Designed autoscaling for the service node layer using rolling request rate monitoring and round robin routing to scale request handling under burst traffic."
+  ]
+},   
 {
     "title": "Neural Network Compression for Ventricular Arrhythmia Detection",
     "links": [["Poster", "/tinyml.pdf"]],
