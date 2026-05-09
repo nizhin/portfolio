@@ -23,9 +23,9 @@
       {"label": "Software Development", "variant": "backend"}
     ],
     "description": [
-      "Partnering with Medtronic engineers in a year-long academic industry collaboration to design, implement, and test a software solution in the medical technology domain.",
-      "Define project scope, document system specifications, and ensure all design components comply with industry and regulatory standards.",
-      "Contribute to the full Agile development lifecycle, including architecture design, coding, testing, and peer code reviews."
+      "Architected and developed an AI-driven log analysis platform to automatically ingest and process log files from embedded medical devices, streamlining the detection of system anomalies.",
+      "Engineered an automated integration pipeline that correlates detected anomalies with existing bugs, significantly reducing manual overhead.",
+      "Collaborated with Medtronic engineers through the full Agile development lifecycle, ensuring all architectural designs and system components complied with medical technology and regulatory standards."
     ]
   },
   {
