@@ -1,98 +1,201 @@
-[ {
+[
+  {
     "title": "Multi-Dialect Vietnamese Text to Speech",
-    "links": [["Poster", "/viet_tts.pdf"], ["Report", "/tts_report.pdf"],["Webpage","https://vybuin.github.io/viet_tts_project/"]],
+    "links": [
+      [
+        "Poster",
+        "/viet_tts.pdf"
+      ],
+      [
+        "Report",
+        "/tts_report.pdf"
+      ],
+      [
+        "Webpage",
+        "https://vybuin.github.io/viet_tts_project/"
+      ]
+    ],
     "image": "/viet_tts.png",
+    "visual": "speech",
     "date": "2026",
     "badges": [
-      {"label": "NLP", "variant": "ml"},
-      {"label": "F5-TTS", "variant": "ml"}
-      
+      {
+        "label": "NLP",
+        "variant": "ml"
+      },
+      {
+        "label": "F5-TTS",
+        "variant": "ml"
+      }
     ],
     "description": [
       "Fine-tuned and evaluated a multi-dialect Vietnamese TTS system using F5-TTS on ~71 hours of dialect-annotated speech across Northern, Central, and Southern Vietnamese.",
       "Designed evaluation workflow using WER, MOS, and qualitative error analysis to measure speech intelligibility, naturalness, and dialect preservation across training checkpoints.",
       "Built and presented an interactive Gradio demo for dialect-controlled Vietnamese speech synthesis with generated audio playback and mel spectrogram visualization."
-    ]
- },  
- {
-  "title": "Distributed Auction Marketplace System",
-  "links": [
-    ["Report", "/distributed_marketplace_report.pdf"]
-  ],
-  "image": "/distributed.png",
-  "date": "2026",
-  "badges": [
-    {"label": "Distributed Systems", "variant": "backend"},
-    {"label": "Docker", "variant": "backend"},
-    {"label": "gRPC", "variant": "backend"}
-  ],
-  "description": [
-    "Built a container based distributed auction marketplace using Docker Compose, with a centralized controller, stateless service nodes, and replicated SQLite backed storage nodes.",
-    "Implemented primary-backup replication with controller managed health checks and automatic primary failover to maintain availability during storage node failures.",
-    "Designed autoscaling for the service node layer using rolling request rate monitoring and round robin routing to scale request handling under burst traffic."
-  ]
-},   
-{
-    "title": "Neural Network Compression for Ventricular Arrhythmia Detection",
-    "links": [["Poster", "/tinyml.pdf"]],
-    "image": "/ekg.png",
+    ],
+    "featured": true
+  },
+  {
+    "title": "Distributed Auction Marketplace System",
+    "links": [
+      [
+        "Report",
+        "/distributed_marketplace_report.pdf"
+      ]
+    ],
+    "image": "/distributed.png",
+    "visual": "",
     "date": "2026",
     "badges": [
-      {"label": "TinyML", "variant": "ml"},
-      {"label": "Model Compression", "variant": "ml"},
-      {"label": "Quantization", "variant": "ml"}
+      {
+        "label": "Distributed Systems",
+        "variant": "backend"
+      },
+      {
+        "label": "Docker",
+        "variant": "backend"
+      },
+      {
+        "label": "gRPC",
+        "variant": "backend"
+      }
     ],
     "description": [
-    "Optimized a deep learning model for cardiac arrhythmia detection tailored for resource constrained microcontrollers.",
-    "Compressed model size by implementing Depthwise Separable Convolutions, BatchNorm folding, and Quantization Aware Training (QAT).",
-    "Evaluated tradeoffs across INT8, INT4, and INT2 bit widths to identify the viable precision for accurate classification."
-    ]
-  },   
-{
+      "Built a container based distributed auction marketplace using Docker Compose, with a centralized controller, stateless service nodes, and replicated SQLite backed storage nodes.",
+      "Implemented primary-backup replication with controller managed health checks and automatic primary failover to maintain availability during storage node failures.",
+      "Designed autoscaling for the service node layer using rolling request rate monitoring and round robin routing to scale request handling under burst traffic."
+    ],
+    "featured": true
+  },
+  {
+    "title": "Neural Network Compression for Ventricular Arrhythmia Detection",
+    "links": [
+      [
+        "Poster",
+        "/tinyml.pdf"
+      ]
+    ],
+    "image": "/ekg.png",
+    "visual": "signal",
+    "date": "2026",
+    "badges": [
+      {
+        "label": "TinyML",
+        "variant": "ml"
+      },
+      {
+        "label": "Model Compression",
+        "variant": "ml"
+      },
+      {
+        "label": "Quantization",
+        "variant": "ml"
+      }
+    ],
+    "description": [
+      "Optimized a deep learning model for cardiac arrhythmia detection tailored for resource constrained microcontrollers.",
+      "Compressed model size by implementing Depthwise Separable Convolutions, BatchNorm folding, and Quantization Aware Training (QAT).",
+      "Evaluated tradeoffs across INT8, INT4, and INT2 bit widths to identify the viable precision for accurate classification."
+    ],
+    "featured": true
+  },
+  {
     "title": "DaeTrace",
-    "links": [["GitHub","https://github.com/nizhin/daetrace.git"]],
+    "links": [
+      [
+        "GitHub",
+        "https://github.com/nizhin/daetrace.git"
+      ]
+    ],
     "image": "/daetrace.png",
     "date": "2026",
     "badges": [
-      {"label": "Firebase", "variant": "backend"},
-      {"label": "Vue", "variant": "frontend"},
-      {"label": "Manifest V3", "variant": "frontend"}
+      {
+        "label": "Firebase",
+        "variant": "backend"
+      },
+      {
+        "label": "Vue",
+        "variant": "frontend"
+      },
+      {
+        "label": "Manifest V3",
+        "variant": "frontend"
+      }
     ],
     "description": [
       "Architected and built a full-stack productivity tracking system using a Chrome Extension (Manifest V3) and Firebase for MinneHack 2026.",
       "Designed scalable data models for user activity, session metadata, and domain categorization.",
       "Implemented session state management and dynamic domain-blocking logic, leveraging Firestore real-time listeners to synchronize data consistently between the extension and web dashboard."
-    ]
+    ],
+    "featured": true
   },
   {
     "title": "Gamblr",
-    "links": [["gamblr", "https://gamblr-16a50.firebaseapp.com/"]],
+    "links": [
+      [
+        "gamblr",
+        "https://gamblr-16a50.firebaseapp.com/"
+      ]
+    ],
     "image": "/gamblr.png",
     "date": "2025",
     "badges": [
-      {"label": "Firebase", "variant": "backend"},
-      {"label": "Vue", "variant": "frontend"},
-      {"label": "PrimeVue", "variant": "frontend"},
-      {"label": "Vuefire", "variant": "frontend"},
-      {"label": "Three.js", "variant": "frontend"}
+      {
+        "label": "Firebase",
+        "variant": "backend"
+      },
+      {
+        "label": "Vue",
+        "variant": "frontend"
+      },
+      {
+        "label": "PrimeVue",
+        "variant": "frontend"
+      },
+      {
+        "label": "Vuefire",
+        "variant": "frontend"
+      },
+      {
+        "label": "Three.js",
+        "variant": "frontend"
+      }
     ],
     "description": [
       "Developed a full-stack web application for tracking gambling habits with real time data synchronization using Firestore NoSQL database.",
       "Built a fully customizable drag and drop dashboard allowing users to personalize their workspace with interactive widgets for data visualization and spending analysis.",
       "Implemented voice transcription for visit notes using Google Cloud Speech to Text API integrated with Firebase Functions and created a practice mode featuring a Three.js 3D slot machine simulation."
-    ]
+    ],
+    "featured": true
   },
   {
     "title": "Nap Finder",
-    "links": [["NapFinder", "https://napfinder.onrender.com/"]],
+    "links": [
+      [
+        "NapFinder",
+        "https://napfinder.onrender.com/"
+      ]
+    ],
     "image": "/napfinder.png",
     "date": "2025",
     "badges": [
-      {"label": "Python", "variant": "backend"},
-      {"label": "Flask", "variant": "backend"},
-      {"label": "PostgresSQL", "variant": "backend"},
-      {"label": "HTML/CSS", "variant": "frontend"}
-      
+      {
+        "label": "Python",
+        "variant": "backend"
+      },
+      {
+        "label": "Flask",
+        "variant": "backend"
+      },
+      {
+        "label": "PostgresSQL",
+        "variant": "backend"
+      },
+      {
+        "label": "HTML/CSS",
+        "variant": "frontend"
+      }
     ],
     "description": [
       "Engineered a CRUD API for locations, reviews, and users, featuring data aggregation for average ratings.",
@@ -102,15 +205,35 @@
   },
   {
     "title": "Pokémon Type Classifier",
-    "links": [["Project Report", "/pokemon_report.pdf"]],
+    "links": [
+      [
+        "Project Report",
+        "/pokemon_report.pdf"
+      ]
+    ],
     "image": "/pokemon.png",
     "date": "2025",
-    "languages": ["Python", "PyTorch"],
+    "languages": [
+      "Python",
+      "PyTorch"
+    ],
     "badges": [
-      {"label": "Python", "variant": "ml"},
-      {"label": "PyTorch", "variant": "ml"},
-      {"label": "Machine Learning", "variant": "ml"},
-      {"label": "Computer Vision", "variant": "ml"}
+      {
+        "label": "Python",
+        "variant": "ml"
+      },
+      {
+        "label": "PyTorch",
+        "variant": "ml"
+      },
+      {
+        "label": "Machine Learning",
+        "variant": "ml"
+      },
+      {
+        "label": "Computer Vision",
+        "variant": "ml"
+      }
     ],
     "description": [
       "Developed image classification models to predict Pokémon types using convolutional neural networks (CNNs) and Vision Transformers (ViTs) on a custom labeled dataset of Pokémon images.",
@@ -123,11 +246,22 @@
     "links": [],
     "image": "/VTS.png",
     "date": "2024",
-    "languages": ["Java"],
+    "languages": [
+      "Java"
+    ],
     "badges": [
-      {"label": "Java", "variant": "backend"},
-      {"label": "Software Design", "variant": "backend"},
-      {"label": "OOP", "variant": "backend"}
+      {
+        "label": "Java",
+        "variant": "backend"
+      },
+      {
+        "label": "Software Design",
+        "variant": "backend"
+      },
+      {
+        "label": "OOP",
+        "variant": "backend"
+      }
     ],
     "description": [
       "Contributed to the design, documentation, and implementation of a Visual Transit Simulator modeling vehicle and passenger behavior across routes.",
@@ -140,11 +274,22 @@
     "links": [],
     "image": "/SQLite.png",
     "date": "2024",
-    "languages": ["C"],
+    "languages": [
+      "C"
+    ],
     "badges": [
-      {"label": "C", "variant": "systems"},
-      {"label": "Databases", "variant": "backend"},
-      {"label": "Systems Programming", "variant": "systems"}
+      {
+        "label": "C",
+        "variant": "systems"
+      },
+      {
+        "label": "Databases",
+        "variant": "backend"
+      },
+      {
+        "label": "Systems Programming",
+        "variant": "systems"
+      }
     ],
     "description": [
       "Developed a lightweight relational database inspired by SQLite, implementing core database functionalities in C.",
@@ -153,74 +298,123 @@
     ]
   },
   {
-  "title": "Simple Retrieval-Augmented Generation (RAG) System",
-  "links": [],
-  "image": "/rag.jpg",
-  "date": "2024",
-  "languages": ["Python"],
-  "badges": [
-    {"label": "Python", "variant": "ml"},
-    {"label": "PyTorch", "variant": "ml"},
-    {"label": "Embeddings", "variant": "ml"}
-    
-  ],
-  "description": [
-    "Built a lightweight RAG pipeline integrating Ollama models for embedding and generation.",
-    "Implemented text chunk embedding, vector database storage, and cosine similarity search for context retrieval.",
-    "Combined retrieved context with a language model prompt to generate grounded responses."
-  ]
+    "title": "Simple Retrieval-Augmented Generation (RAG) System",
+    "links": [],
+    "image": "/rag.jpg",
+    "date": "2024",
+    "languages": [
+      "Python"
+    ],
+    "badges": [
+      {
+        "label": "Python",
+        "variant": "ml"
+      },
+      {
+        "label": "PyTorch",
+        "variant": "ml"
+      },
+      {
+        "label": "Embeddings",
+        "variant": "ml"
+      }
+    ],
+    "description": [
+      "Built a lightweight RAG pipeline integrating Ollama models for embedding and generation.",
+      "Implemented text chunk embedding, vector database storage, and cosine similarity search for context retrieval.",
+      "Combined retrieved context with a language model prompt to generate grounded responses."
+    ]
   },
   {
-  "title": "Multi-Threaded HTTP Server",
-  "links": [],
-  "image": "/server.svg",
-  "date": "2024",
-  "languages": ["C"],
-  "badges": [
-    {"label": "C", "variant": "systems"},
-    {"label": "Multi-threading", "variant": "systems"},
-    {"label": "Networking", "variant": "systems"},
-    {"label": "Systems Programming", "variant": "systems"}
-  ],
-  "description": [
- "Built an multi-threaded HTTP web server in C that handles multiple clients using a thread pool.",
-    "Implemented TCP socket setup, request parsing, and response generation for file retrieval.",
-    "Created a thread-safe queue for managing client connections and ensured clean server shutdown."
-  ]
-},
-{
-  "title": "Simple Working Implementation Shell (Swish)",
-  "links": [],
-  "image": "/swish.png",
-  "date": "2024",
-  "languages": ["C"],
-  "badges": [
-     {"label": "C", "variant": "systems"},
-    {"label": "Shell", "variant": "systems"},
-    {"label": "Job Control", "variant": "systems"},
-     {"label": "Systems Programming", "variant": "systems"}
-  ],
-  "description": [
-    "Developed a simplified Unix shell supporting command execution, directory management, and I/O redirection.",
-    "Implemented process creation, signal handling, and job control using system calls like fork(), exec(), waitpid(), and sigaction().",
-    "Extended functionality to handle pipelines, enabling commands to communicate via pipes for parallel execution."
-  ]
-},
-{
-  "title": "Minitar",
-  "links": [],
-  "image": "/GNU.png",
-  "date": "2024",
-  "languages": ["C"],
-  "badges": [
-    {"label": "C", "variant": "systems"},
-    {"label": "Archiving", "variant": "systems"},
-    {"label": "Systems Programming", "variant": "systems"}
-  ],
-  "description": [
-    "Created a simplified Posix-compliant version of the tar utility using C and the stdio library.",
-    "Implemented archive creation, extraction, listing, and updating with proper 512-byte block formatting.",
-    "Handled file I/O, header metadata generation, and error checking for reliable archive operations."
-  ]
-}
+    "title": "Multi-Threaded HTTP Server",
+    "links": [],
+    "image": "/server.svg",
+    "date": "2024",
+    "languages": [
+      "C"
+    ],
+    "badges": [
+      {
+        "label": "C",
+        "variant": "systems"
+      },
+      {
+        "label": "Multi-threading",
+        "variant": "systems"
+      },
+      {
+        "label": "Networking",
+        "variant": "systems"
+      },
+      {
+        "label": "Systems Programming",
+        "variant": "systems"
+      }
+    ],
+    "description": [
+      "Built an multi-threaded HTTP web server in C that handles multiple clients using a thread pool.",
+      "Implemented TCP socket setup, request parsing, and response generation for file retrieval.",
+      "Created a thread-safe queue for managing client connections and ensured clean server shutdown."
+    ]
+  },
+  {
+    "title": "Simple Working Implementation Shell (Swish)",
+    "links": [],
+    "image": "/swish.png",
+    "date": "2024",
+    "languages": [
+      "C"
+    ],
+    "badges": [
+      {
+        "label": "C",
+        "variant": "systems"
+      },
+      {
+        "label": "Shell",
+        "variant": "systems"
+      },
+      {
+        "label": "Job Control",
+        "variant": "systems"
+      },
+      {
+        "label": "Systems Programming",
+        "variant": "systems"
+      }
+    ],
+    "description": [
+      "Developed a simplified Unix shell supporting command execution, directory management, and I/O redirection.",
+      "Implemented process creation, signal handling, and job control using system calls like fork(), exec(), waitpid(), and sigaction().",
+      "Extended functionality to handle pipelines, enabling commands to communicate via pipes for parallel execution."
+    ]
+  },
+  {
+    "title": "Minitar",
+    "links": [],
+    "image": "/GNU.png",
+    "date": "2024",
+    "languages": [
+      "C"
+    ],
+    "badges": [
+      {
+        "label": "C",
+        "variant": "systems"
+      },
+      {
+        "label": "Archiving",
+        "variant": "systems"
+      },
+      {
+        "label": "Systems Programming",
+        "variant": "systems"
+      }
+    ],
+    "description": [
+      "Created a simplified Posix-compliant version of the tar utility using C and the stdio library.",
+      "Implemented archive creation, extraction, listing, and updating with proper 512-byte block formatting.",
+      "Handled file I/O, header metadata generation, and error checking for reliable archive operations."
+    ]
+  }
 ]

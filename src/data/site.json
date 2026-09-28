@@ -1,0 +1,16 @@
+{
+  "name": "Quenton Ni",
+  "headline": "AI/ML, SWE",
+  "about": [
+    "I build software and applied AI tools that solve practical problems. My recent work includes automating sales research, building a diagnostic-log workflow for Medtronic, and compressing a cardiac arrhythmia model.",
+    "I earned my B.S. in Computer Science with High Distinction from the University of Minnesota in May 2026. I am continuing there in the M.S. in Computer Science program, with graduation expected in May 2027.",
+    "Outside of work, I enjoy video games, working out, and playing piano."
+  ],
+  "email": "qton680@gmail.com",
+  "contactText": "Feel free to reach out!",
+  "resume": "/resume.pdf",
+  "links": [
+    { "label": "GitHub", "url": "https://github.com/nizhin" },
+    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/quenton-ni/" }
+  ]
+}
