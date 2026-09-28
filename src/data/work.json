@@ -1,81 +1,75 @@
 [
   {
-    "title": "IT Intern",
+    "title": "IT Intern (Applied AI & Data Automation) · Land O'Lakes",
     "links": [],
     "image": "/landolakes.jpg",
-    "date": "May 2026 – Present",
-    "languages": [""],
+    "date": "May 2026 – July 2026",
     "badges": [
+      {"label": "Azure AI Foundry", "variant": "ml"},
+      {"label": "Snowflake", "variant": "backend"},
+      {"label": "Object Detection", "variant": "ml"}
     ],
     "description": [
-      "Incoming at Land O' Lakes!"
+      "Built an Azure AI Foundry web agent that scraped and normalized K–12 meal data from more than 100 districts into Snowflake, automating an estimated 120 hours of sales research.",
+      "Fine-tuned and evaluated RF-DETR and YOLO models to flag pallet defects for manual review in a claims process associated with approximately $3M in annual losses."
     ]
   },
   {
-    "title": "Software Engineer (Capstone)",
+    "title": "Software Engineer (Capstone) · Medtronic",
     "links": [],
     "image": "/medtronic.jpeg",
     "date": "September 2025 – May 2026",
-    "languages": ["Python"],
     "badges": [
-      {"label": "Agile", "variant": "process"},
-      {"label": "Requirements", "variant": "process"},
-      {"label": "Software Development", "variant": "backend"}
+      {"label": "FastAPI", "variant": "backend"},
+      {"label": "React", "variant": "frontend"},
+      {"label": "Azure DevOps", "variant": "process"}
     ],
     "description": [
-      "Architected and developed an AI-driven log analysis platform to automatically ingest and process log files from embedded medical devices, streamlining the detection of system anomalies.",
-      "Engineered an automated integration pipeline that correlates detected anomalies with existing bugs, significantly reducing manual overhead.",
-      "Collaborated with Medtronic engineers through the full Agile development lifecycle, ensuring all architectural designs and system components complied with medical technology and regulatory standards."
+      "Built and optimized a FastAPI and React workflow that matched diagnostic logs to Azure DevOps bugs using cached checksums, WIQL, and concurrent retrieval, so engineers could confirm, revise, or dismiss suggested matches.",
+      "Integrated automated unit tests and SonarQube analysis into Azure DevOps pipelines while coordinating delivery across four student teams and a research lab."
     ]
   },
   {
-    "title": "Research Assistant",
+    "title": "Research Assistant · University of Minnesota",
     "links": [],
     "image": "/umn.png",
     "date": "September 2025 – May 2026",
-    "languages": ["Python"],
     "badges": [
-      {"label": "Research", "variant": "research"},
-      {"label": "Quantization", "variant": "ml"},
-      {"label": "Python", "variant": "ml"},
-      {"label": "PyTorch", "variant": "ml"}
+      {"label": "NSF REU & UROP", "variant": "research"},
+      {"label": "Model Compression", "variant": "ml"},
+      {"label": "Quantization", "variant": "ml"}
     ],
     "description": [
-      "Conducted research on neural network quantization, exploring number representation schemes (e.g., fixed point, block floating point) to improve model efficiency.",
-      "Implemented experiments in Python/PyTorch and review literature on quantization methods to support ongoing research."
+      "Redesigned a ventricular arrhythmia classification model using depthwise separable convolutions, reducing its parameter count from 1,534 to 390.",
+      "Implemented INT4 quantization-aware training, contributing to a 31× reduction in theoretical model footprint while retaining a 0.956 F-beta score versus 0.964 for the FP32 baseline."
     ]
   },
   {
-    "title": "Computer Science Teaching Assistant",
+    "title": "Computer Science Teaching Assistant · University of Minnesota",
     "links": [],
     "image": "/umn.png",
     "date": "September 2024 – May 2026",
-    "languages": ["Java"],
     "badges": [
       {"label": "Teaching", "variant": "teaching"},
       {"label": "Java", "variant": "backend"},
-      {"label": "Data Structures", "variant": "backend"}
+      {"label": "C Systems", "variant": "systems"}
     ],
     "description": [
-      "Facilitate the education of 400+ students in courses ranging from Java based data structures to C systems programming and x86-64 assembly by holding weekly office hours, and testing course content for assignments, and exams.",
-      "Held weekly office hours and coordinated weekly labs for 30+ students to reinforce hands-on coding skills.",
-      "Collaborated with faculty and other TAs to test assignments, projects, and exams, and refine the course curriculum."
+      "Led weekly labs and office hours covering Java, C systems programming, and x86-64 assembly, supporting more than 400 students and testing course materials."
     ]
   },
   {
-    "title": "Machine Learning Teaching Assistant",
+    "title": "Machine Learning Teaching Assistant · Data Science and AI Hub",
     "links": [],
     "image": "/dsi.png",
     "date": "May 2025 – August 2025",
-    "languages": ["Python"],
     "badges": [
       {"label": "Teaching", "variant": "teaching"},
       {"label": "Machine Learning", "variant": "ml"},
       {"label": "Python", "variant": "ml"}
     ],
     "description": [
-      "Supported PhD-led instruction for 90+ high school seniors in the UMN DSI AI Explorers Summer Program.",
-      "Taught machine learning concepts such as neural networks, CNNs, transformers, and reinforcement learning using PyTorch and scikit-learn."
+      "Supported PhD-led instruction for more than 90 high school seniors, teaching machine learning concepts including deep neural networks, transformers, and reinforcement learning."
     ]
   }
 ]
