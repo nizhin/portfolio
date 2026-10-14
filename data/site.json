@@ -10,7 +10,26 @@
   "contactText": "Feel free to reach out!",
   "resume": "/resume.pdf",
   "links": [
-    { "label": "GitHub", "url": "https://github.com/nizhin" },
-    { "label": "LinkedIn", "url": "https://www.linkedin.com/in/quenton-ni/" }
-  ]
+    {
+      "label": "GitHub",
+      "url": "https://github.com/nizhin"
+    },
+    {
+      "label": "LinkedIn",
+      "url": "https://www.linkedin.com/in/quenton-ni/"
+    }
+  ],
+  "home": {
+    "title": "Hi, I'm Quenton.",
+    "intro": [
+      "I'm a computer science master's student at the University of Minnesota.",
+      "I build software and applied AI tools that solve practical problems.",
+      "Outside of work: video games, working out, and playing piano."
+    ],
+    "portrait": {
+      "src": "/portrait.jpg",
+      "alt": "Portrait of Quenton Ni"
+    }
+  },
+  "projectsIntro": "A collection of things I've built, studied, and worked on."
 }

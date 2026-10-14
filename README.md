@@ -1,70 +1,68 @@
-# Getting Started with Create React App
+# Quenton Ni — Portfolio
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+A small static portfolio with a shared layout, editable JSON content, and light/dark themes. Published at https://nizhin.github.io/portfolio/. Building and previewing require only Node.js 20 or newer; the deployment tool is installed with `npm ci`.
 
-## Available Scripts
+## Preview
 
-In the project directory, you can run:
+From this directory, run `npm run build`, then `npm start`. Open the printed local URL (normally http://127.0.0.1:4174).
 
-### `npm start`
+Run the build again and refresh the browser after edits. `PORT` can override the preview port.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Content
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+- `data/site.json` contains the home introduction, portrait, full biography, contact details, resume link, and project-list introduction.
+- `data/projects.json` contains projects in display order. Featured entries also appear on Home.
+- `data/work.json` contains experience entries in display order.
+- `public/` holds files such as the portrait, resume, and project reports. Project images are not displayed.
+- `build.mjs` generates home, projects, about, and individual project pages.
+- `style.css` controls the layout and typography.
+- `dist/` is the generated static website. It works at a domain root or under a path such as `/portfolio/`.
 
-### `npm test`
+The previous React implementation is preserved in Git history. Local `minimal/` and `redesign/` directories are earlier previews and are not the active source.
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## Add a project
 
-### `npm run build`
+Add an object to the array in `data/projects.json` (with a comma between objects):
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+```json
+{
+  "title": "My next project",
+  "slug": "my-next-project",
+  "date": "2027",
+  "featured": true,
+  "summary": "A short explanation of what the project does.",
+  "description": [
+    "What I built and why.",
+    "A second paragraph with details about my contribution."
+  ],
+  "topics": ["Python", "Machine Learning"],
+  "links": [
+    ["GitHub", "https://github.com/your-account/your-project"],
+    ["Report", "/my-project-report.pdf"]
+  ]
+}
+```
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+Only `title`, `date`, and a nonempty `description` array are required. `featured`, `summary`, `topics`, and `links` are optional. Set `featured` to `true` to include it on Home. The one-sentence `summary` appears at the top of the individual project page and in its search description; project lists show only titles and dates. Each description string becomes a paragraph; array order controls project order. Existing `badges` and `languages` fields remain supported for topics.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+Use a unique `slug` with lowercase letters, numbers, and hyphens. Keep it unchanged when renaming a project so existing links keep working. If omitted, the slug is generated from the title. The build checks for duplicate or invalid slugs before replacing generated pages.
 
-### `npm run eject`
+Put downloadable files in `public/`, then use a path such as `/my-project-report.pdf`. Local links automatically work from nested pages and under a deployment path. No image field is needed.
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+Run `npm run build` and refresh the preview. The project list, individual page, and featured list update automatically. Do not edit `dist/` directly; the next build replaces it.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+## Add experience or update the biography
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+Edit `home.intro` in `data/site.json` for the short home introduction and `about` for the full biography. Both use arrays of paragraph strings. Contact and social links live in the same file.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Add an entry to `data/work.json` using `role`, `organization`, `date`, and `description` (an array of paragraphs). The existing combined `title` format also works. Reorder entries in the array to change their display order, then rebuild.
 
-## Learn More
+## Appearance
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Shared page layout and navigation live in `build.mjs`; all pages use `style.css`. For a future section, add its data and template there and register its page in the `pages` array and navigation in `nav`.
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Light and dark colors are CSS variables at the top of `style.css`. The small `public/theme.js` script follows the device preference initially and remembers a visitor's explicit choice across pages and visits. Without JavaScript, the site remains usable and follows the device theme through CSS. No external fonts or packages are required.
 
-### Code Splitting
+## Validate and publish
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Run `npm run build` followed by `npm run check` to validate all generated pages, local links, assets, and content. Commit source changes and push to `main`, then run `npm run deploy` to build, validate, and publish `dist/` to the existing `gh-pages` branch. GitHub Pages serves that branch. Generated output is not committed to `main`.

@@ -33,7 +33,9 @@
       "Designed evaluation workflow using WER, MOS, and qualitative error analysis to measure speech intelligibility, naturalness, and dialect preservation across training checkpoints.",
       "Built and presented an interactive Gradio demo for dialect-controlled Vietnamese speech synthesis with generated audio playback and mel spectrogram visualization."
     ],
-    "featured": true
+    "featured": true,
+    "slug": "multi-dialect-vietnamese-text-to-speech",
+    "summary": "A Vietnamese speech synthesis system with selectable Northern, Central, and Southern dialects."
   },
   {
     "title": "Distributed Auction Marketplace System",
@@ -65,7 +67,9 @@
       "Implemented primary-backup replication with controller managed health checks and automatic primary failover to maintain availability during storage node failures.",
       "Designed autoscaling for the service node layer using rolling request rate monitoring and round robin routing to scale request handling under burst traffic."
     ],
-    "featured": true
+    "featured": false,
+    "slug": "distributed-auction-marketplace-system",
+    "summary": "A distributed auction marketplace with replicated storage, automatic failover, and autoscaling to handle node failures and changing demand."
   },
   {
     "title": "Neural Network Compression for Ventricular Arrhythmia Detection",
@@ -97,7 +101,9 @@
       "Compressed model size by implementing Depthwise Separable Convolutions, BatchNorm folding, and Quantization Aware Training (QAT).",
       "Evaluated tradeoffs across INT8, INT4, and INT2 bit widths to identify the viable precision for accurate classification."
     ],
-    "featured": true
+    "featured": true,
+    "slug": "neural-network-compression-for-ventricular-arrhythmia-detection",
+    "summary": "Exploring how network redesign and quantization can shrink an arrhythmia detection model for resource-constrained microcontrollers."
   },
   {
     "title": "DaeTrace",
@@ -128,7 +134,9 @@
       "Designed scalable data models for user activity, session metadata, and domain categorization.",
       "Implemented session state management and dynamic domain-blocking logic, leveraging Firestore real-time listeners to synchronize data consistently between the extension and web dashboard."
     ],
-    "featured": true
+    "featured": false,
+    "slug": "daetrace",
+    "summary": "A browser extension and web dashboard for tracking browsing activity and managing distractions through domain blocking."
   },
   {
     "title": "Gamblr",
@@ -167,7 +175,9 @@
       "Built a fully customizable drag and drop dashboard allowing users to personalize their workspace with interactive widgets for data visualization and spending analysis.",
       "Implemented voice transcription for visit notes using Google Cloud Speech to Text API integrated with Firebase Functions and created a practice mode featuring a Three.js 3D slot machine simulation."
     ],
-    "featured": true
+    "featured": true,
+    "slug": "gamblr",
+    "summary": "A customizable dashboard for tracking gambling habits, reviewing spending, and recording visit notes."
   },
   {
     "title": "Nap Finder",
@@ -201,7 +211,9 @@
       "Engineered a CRUD API for locations, reviews, and users, featuring data aggregation for average ratings.",
       "Implemented an interactive map view with dynamic pins that navigate users to pre-filtered detail pages for specific nap spot locations.",
       "Developed comprehensive spot detail pages displaying dynamic building information, user reviews, and specific access requirements."
-    ]
+    ],
+    "slug": "nap-finder",
+    "featured": false
   },
   {
     "title": "Pokémon Type Classifier",
@@ -239,7 +251,9 @@
       "Developed image classification models to predict Pokémon types using convolutional neural networks (CNNs) and Vision Transformers (ViTs) on a custom labeled dataset of Pokémon images.",
       "Preprocessed and augmented over 1,000 images to improve model robustness and handle class imbalance.",
       "Evaluated model performance using precision, recall, F1-score, and confusion matrices; refined hyperparameters to boost accuracy."
-    ]
+    ],
+    "slug": "pokemon-type-classifier",
+    "featured": false
   },
   {
     "title": "Visual Transit Simulator",
@@ -267,7 +281,9 @@
       "Contributed to the design, documentation, and implementation of a Visual Transit Simulator modeling vehicle and passenger behavior across routes.",
       "Created UML class diagrams and Javadoc documentation while adhering to Google Java style guidelines.",
       "Designed and executed unit tests to ensure robustness and compliance with project requirements."
-    ]
+    ],
+    "slug": "visual-transit-simulator",
+    "featured": false
   },
   {
     "title": "SQLite Clone",
@@ -295,7 +311,9 @@
       "Developed a lightweight relational database inspired by SQLite, implementing core database functionalities in C.",
       "Utilized a B-tree index structure to optimize query performance and minimize full table scans.",
       "Engineered a custom storage format for data persistence, managing in-memory structures and disk I/O operations."
-    ]
+    ],
+    "slug": "sqlite-clone",
+    "featured": false
   },
   {
     "title": "Simple Retrieval-Augmented Generation (RAG) System",
@@ -323,7 +341,9 @@
       "Built a lightweight RAG pipeline integrating Ollama models for embedding and generation.",
       "Implemented text chunk embedding, vector database storage, and cosine similarity search for context retrieval.",
       "Combined retrieved context with a language model prompt to generate grounded responses."
-    ]
+    ],
+    "slug": "simple-retrieval-augmented-generation-rag-system",
+    "featured": false
   },
   {
     "title": "Multi-Threaded HTTP Server",
@@ -355,7 +375,9 @@
       "Built an multi-threaded HTTP web server in C that handles multiple clients using a thread pool.",
       "Implemented TCP socket setup, request parsing, and response generation for file retrieval.",
       "Created a thread-safe queue for managing client connections and ensured clean server shutdown."
-    ]
+    ],
+    "slug": "multi-threaded-http-server",
+    "featured": false
   },
   {
     "title": "Simple Working Implementation Shell (Swish)",
@@ -387,7 +409,9 @@
       "Developed a simplified Unix shell supporting command execution, directory management, and I/O redirection.",
       "Implemented process creation, signal handling, and job control using system calls like fork(), exec(), waitpid(), and sigaction().",
       "Extended functionality to handle pipelines, enabling commands to communicate via pipes for parallel execution."
-    ]
+    ],
+    "slug": "simple-working-implementation-shell-swish",
+    "featured": false
   },
   {
     "title": "Minitar",
@@ -415,6 +439,8 @@
       "Created a simplified Posix-compliant version of the tar utility using C and the stdio library.",
       "Implemented archive creation, extraction, listing, and updating with proper 512-byte block formatting.",
       "Handled file I/O, header metadata generation, and error checking for reliable archive operations."
-    ]
+    ],
+    "slug": "minitar",
+    "featured": false
   }
 ]
