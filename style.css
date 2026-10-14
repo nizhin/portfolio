@@ -38,6 +38,8 @@ body {
 a { color: inherit; text-underline-offset: 4px; text-decoration-thickness: 1px; }
 a:hover { text-decoration-color: var(--ink); }
 a:focus-visible, button:focus-visible { outline: 2px solid var(--ink); outline-offset: 5px; border-radius: 1px; }
+/* Navigation focuses this landmark for accessibility, not as an interactive control. */
+main[tabindex="-1"]:focus { outline: none; }
 .page { width: min(640px, calc(100% - 48px)); margin: 0 auto; }
 .skip-link { position: fixed; top: 8px; left: 8px; transform: translateY(-160%); padding: 8px 14px; background: var(--ink); color: var(--paper); z-index: 10; }
 .skip-link:focus { transform: translateY(0); }
