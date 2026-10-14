@@ -42,6 +42,7 @@ function layout({ title, active, base = './', content, description }) {
   <title>${escape(title ? `${title} — ${site.name}` : site.name)}</title>
   <link rel="icon" href="${base}favicon.svg" type="image/svg+xml">
   <script src="${base}theme.js"></script>
+  <script src="${base}navigation.js" defer></script>
   <link rel="stylesheet" href="${base}style.css">
 </head>
 <body>
@@ -54,7 +55,7 @@ function layout({ title, active, base = './', content, description }) {
       </nav>
       <button class="theme-toggle" type="button" aria-label="Switch to dark mode" hidden>dark</button>
     </header>
-    <main id="main">${content}</main>
+    <main id="main" tabindex="-1">${content}</main>
     <footer>
       <div class="footer-links" aria-label="Contact links">
         ${link('email', `mailto:${site.email}`, base)}

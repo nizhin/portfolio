@@ -63,6 +63,14 @@ Shared page layout and navigation live in `build.mjs`; all pages use `style.css`
 
 Light and dark colors are CSS variables at the top of `style.css`. The small `public/theme.js` script follows the device preference initially and remembers a visitor's explicit choice across pages and visits. Without JavaScript, the site remains usable and follows the device theme through CSS. No external fonts or packages are required.
 
+## Navigation
+
+`public/navigation.js` enhances internal page links with client-side navigation. It fetches HTML and replaces the main content and active navigation while preserving the theme button, page shell, and browser history. Links are prefetched on pointer hover or keyboard focus, except on data-saving or slow connections. A small in-memory cache lasts for the current browsing session.
+
+Direct URLs and refreshes still load complete HTML pages. PDF downloads, email, external links, same-page anchors, and modified clicks retain their normal browser behavior. Failed requests fall back to ordinary page navigation. Back/Forward restores the saved scroll position, and new pages focus the main content for keyboard and screen-reader users.
+
+On localhost, browser debug logs report full-document DOM-ready/load timings and client-side time from navigation to content update. These measure different milestones and are useful for local diagnosis, not a claim about production network latency. The navigation script also records `portfolio:navigation` Performance measures for browser developer tools.
+
 ## Validate and publish
 
 Run `npm run build` followed by `npm run check` to validate all generated pages, local links, assets, and content. Commit source changes and push to `main`, then run `npm run deploy` to build, validate, and publish `dist/` to the existing `gh-pages` branch. GitHub Pages serves that branch. Generated output is not committed to `main`.
