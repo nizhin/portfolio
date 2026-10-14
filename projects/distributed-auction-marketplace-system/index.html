@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A distributed auction marketplace with replicated storage, automatic failover, and autoscaling to handle node failures and changing demand.">
+  <meta name="theme-color" content="#fcfbf8">
+  <title>Distributed Auction Marketplace System — Quenton Ni</title>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <script src="../../theme.js"></script>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page">
+    <header>
+      <nav aria-label="Main navigation">
+        <a href="../../">home</a>
+        <a href="../../projects/" aria-current="page">projects</a>
+        <a href="../../about/">about</a>
+        <a href="../../resume.pdf">resume</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" hidden>dark</button>
+    </header>
+    <main id="main"><article class="project-detail">
+      <a class="back-link" href="../"><span aria-hidden="true">←</span> All projects</a>
+      <h1>Distributed Auction Marketplace System</h1>
+      <p class="project-meta">2026 <span aria-hidden="true">·</span> Distributed Systems / Docker / gRPC</p>
+      <p class="project-summary">A distributed auction marketplace with replicated storage, automatic failover, and autoscaling to handle node failures and changing demand.</p>
+      <div class="prose"><p>Built a container based distributed auction marketplace using Docker Compose, with a centralized controller, stateless service nodes, and replicated SQLite backed storage nodes.</p>
+<p>Implemented primary-backup replication with controller managed health checks and automatic primary failover to maintain availability during storage node failures.</p>
+<p>Designed autoscaling for the service node layer using rolling request rate monitoring and round robin routing to scale request handling under burst traffic.</p></div>
+      <div class="project-links"><a href="../../distributed_marketplace_report.pdf">Report</a></div>
+    </article></main>
+    <footer>
+      <div class="footer-links" aria-label="Contact links">
+        <a href="mailto:qton680@gmail.com">email</a>
+        <a href="https://github.com/nizhin">github</a>
+        <a href="https://www.linkedin.com/in/quenton-ni/">linkedin</a>
+      </div>
+      <p>© 2026 Quenton Ni</p>
+    </footer>
+  </div>
+</body>
+</html>
