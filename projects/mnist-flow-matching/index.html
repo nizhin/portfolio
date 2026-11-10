@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A generative model that learns to turn random noise into handwritten digits.">
+  <meta name="theme-color" content="#fcfbf8">
+  <title>Generating MNIST Digits with Flow Matching — Quenton Ni</title>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <script src="../../theme.js"></script>
+  <script src="../../navigation.js" defer></script>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page">
+    <header>
+      <nav aria-label="Main navigation">
+        <a href="../../">home</a>
+        <a href="../../projects/" aria-current="page">projects</a>
+        <a href="../../about/">about</a>
+        <a href="../../resume.pdf">resume</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" hidden>dark</button>
+    </header>
+    <main id="main" tabindex="-1"><article class="project-detail">
+      <a class="back-link" href="../"><span aria-hidden="true">←</span> All projects</a>
+      <h1>Generating MNIST Digits with Flow Matching</h1>
+      <p class="project-meta">2026 <span aria-hidden="true">·</span> Generative Modeling / PyTorch / Flow Matching</p>
+      <p class="project-summary">A generative model that learns to turn random noise into handwritten digits.</p>
+      <figure class="project-figure">
+    
+    <div class="figure-images figure-images--1">
+      <div class="figure-image">
+        
+        <img src="../../project-media/mnist-flow-matching/generated-digits.png" alt="Grid of 50 generated white handwritten digits on black tiles, including a few ambiguous shapes." width="625" height="320" decoding="async">
+      </div>
+    </div>
+    <figcaption>50 images randomly selected from the final set of 2,000 generated samples, without filtering or sorting by digit.</figcaption>
+  </figure>
+      <div class="prose"><p>I first tested flow matching on eight clusters of points in two dimensions to see how the model moved noise toward the target distribution. I then adapted the course-provided U-Net to generate MNIST digits and compared Euler and Heun sampling at different step counts.</p>
+<p>For the final model, I chose 50-step Heun sampling to balance recognition and runtime. On 2,000 unfiltered samples, the course classifier assigned a digit with more than 99% confidence to 90.9% of the images. Its predictions covered all ten digits.</p></div>
+      
+      <div class="project-links"><a href="../../project-media/mnist-flow-matching/mnist-flow-matching-report.pdf">Report</a></div>
+    </article></main>
+    <footer>
+      <div class="footer-links" aria-label="Contact links">
+        <a href="mailto:qton680@gmail.com">email</a>
+        <a href="https://github.com/nizhin">github</a>
+        <a href="https://www.linkedin.com/in/quenton-ni/">linkedin</a>
+      </div>
+      <p>© 2026 Quenton Ni</p>
+    </footer>
+  </div>
+</body>
+</html>

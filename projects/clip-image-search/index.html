@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="A search interface that finds photos in a small collection from a written description.">
+  <meta name="theme-color" content="#fcfbf8">
+  <title>Text-to-Image Search with CLIP — Quenton Ni</title>
+  <link rel="icon" href="../../favicon.svg" type="image/svg+xml">
+  <script src="../../theme.js"></script>
+  <script src="../../navigation.js" defer></script>
+  <link rel="stylesheet" href="../../style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+  <div class="page">
+    <header>
+      <nav aria-label="Main navigation">
+        <a href="../../">home</a>
+        <a href="../../projects/" aria-current="page">projects</a>
+        <a href="../../about/">about</a>
+        <a href="../../resume.pdf">resume</a>
+      </nav>
+      <button class="theme-toggle" type="button" aria-label="Switch to dark mode" hidden>dark</button>
+    </header>
+    <main id="main" tabindex="-1"><article class="project-detail">
+      <a class="back-link" href="../"><span aria-hidden="true">←</span> All projects</a>
+      <h1>Text-to-Image Search with CLIP</h1>
+      <p class="project-meta">2026 <span aria-hidden="true">·</span> Computer Vision / CLIP / Python / Gradio</p>
+      <p class="project-summary">A search interface that finds photos in a small collection from a written description.</p>
+      <figure class="project-figure">
+    <h2>Query: “a bunch of bananas”</h2>
+    <div class="figure-images figure-images--3">
+      <div class="figure-image">
+        <span>#1 · 0.305</span>
+        <img src="../../project-media/clip-image-search/banana-bunch.jpg" alt="First result: a bunch of bananas on a dark countertop." width="450" height="600" decoding="async">
+      </div>
+<div class="figure-image">
+        <span>#2 · 0.279</span>
+        <img src="../../project-media/clip-image-search/single-banana.jpg" alt="Second result: a single banana on a dark countertop." width="450" height="600" decoding="async">
+      </div>
+<div class="figure-image">
+        <span>#3 · 0.236</span>
+        <img src="../../project-media/clip-image-search/apple-slices.jpg" alt="Third result: apple slices on a dark plate." width="450" height="600" decoding="async">
+      </div>
+    </div>
+    <figcaption>The saved search ranked both banana photos ahead of the apple slices. The numbers are cosine similarity scores.</figcaption>
+  </figure>
+      <div class="prose"><p>I used pretrained CLIP to encode a collection of 20 photos and rank them by cosine similarity to a text query. I cached the photo embeddings so each search only had to encode the query and score the existing vectors.</p>
+<p>I built a Gradio interface that lets users enter a description and choose how many ranked results to see. I also compared query phrasings and examined close matches, like the apple slices ranked third for the banana query.</p></div>
+      
+      <div class="project-links"><a href="../../project-media/clip-image-search/clip-image-search-report.pdf">Report</a></div>
+    </article></main>
+    <footer>
+      <div class="footer-links" aria-label="Contact links">
+        <a href="mailto:qton680@gmail.com">email</a>
+        <a href="https://github.com/nizhin">github</a>
+        <a href="https://www.linkedin.com/in/quenton-ni/">linkedin</a>
+      </div>
+      <p>© 2026 Quenton Ni</p>
+    </footer>
+  </div>
+</body>
+</html>
