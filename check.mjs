@@ -33,12 +33,10 @@ for (const file of generated) {
     const info = await stat(target);
     if (info.isDirectory()) await stat(path.join(target, 'index.html'));
   }
-  if (file.startsWith(path.join(dist, 'projects') + path.sep)) {
-    assert(!html.includes('<img'), `${file}: project images should not render`);
-  }
 }
 const home = await read('dist/index.html');
 const index = await read('dist/projects/index.html');
+assert(!index.includes('<img'), 'The project list stays text only');
 for (const project of projects) {
   assert(index.includes(`<span class="project-name">${escape(project.title)}</span>`), `${project.title}: missing from index`);
   assert.equal(home.includes(`<span class="project-name">${escape(project.title)}</span>`), !!project.featured, `${project.title}: featured selection`);

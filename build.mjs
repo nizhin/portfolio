@@ -24,6 +24,18 @@ for (const project of projects) {
   if (project.summary !== undefined && typeof project.summary !== 'string') {
     throw new Error(`Project "${project.title}" summary must be a string.`);
   }
+  if (project.figures !== undefined && (!Array.isArray(project.figures) || !project.figures.every((figure) =>
+    figure && typeof figure.caption === 'string' && figure.caption.trim() &&
+    (figure.title === undefined || typeof figure.title === 'string') &&
+    Array.isArray(figure.images) && figure.images.length >= 1 && figure.images.length <= 3 &&
+    (figure.layout === undefined || (figure.layout === 'comparison' && figure.images.length === 3)) &&
+    figure.images.every((image) => image && typeof image.src === 'string' && /^\/(?!\/)/.test(image.src) &&
+      typeof image.alt === 'string' && image.alt.trim() &&
+      (image.label === undefined || typeof image.label === 'string') &&
+      [image.width, image.height].every((size) => Number.isInteger(size) && size > 0))
+  ))) {
+    throw new Error(`Project "${project.title}" needs valid figures with captions, local images, alt text, and dimensions.`);
+  }
   usedSlugs.add(id);
 }
 const href = (url, base) => url.startsWith('/') ? `${base}${url.slice(1)}` : url;
@@ -72,6 +84,20 @@ function projectList(items, base) {
   return `<ul class="project-list">${items.map((project) => `<li>
     <a href="${base}projects/${projectSlug(project)}/"><span class="project-year">${escape(project.date)}</span><span class="project-name">${escape(project.title)}</span></a>
   </li>`).join('\n')}</ul>`;
+}
+
+function projectFigure(figure, base, lead = false) {
+  const columns = figure.layout === 'comparison' ? 'comparison' : figure.images.length;
+  return `<figure class="project-figure">
+    ${figure.title ? `<h2>${escape(figure.title)}</h2>` : ''}
+    <div class="figure-images figure-images--${columns}">
+      ${figure.images.map(({ src, alt, label, width, height }) => `<div class="figure-image">
+        ${label ? `<span>${escape(label)}</span>` : ''}
+        <img src="${escape(href(src, base))}" alt="${escape(alt)}" width="${width}" height="${height}"${lead ? '' : ' loading="lazy"'} decoding="async">
+      </div>`).join('\n')}
+    </div>
+    <figcaption>${escape(figure.caption)}</figcaption>
+  </figure>`;
 }
 
 const home = layout({ active: 'home', content: `
@@ -123,6 +149,7 @@ const pages = [['index.html', home], ['projects/index.html', projectIndex], ['ab
 for (const project of projects) {
   const base = '../../';
   const topics = project.topics || project.badges?.map((badge) => badge.label) || project.languages || [];
+  const [leadFigure, ...moreFigures] = project.figures || [];
   pages.push([`projects/${projectSlug(project)}/index.html`, layout({
     title: project.title, active: 'projects', base, description: project.summary || project.description[0],
     content: `<article class="project-detail">
@@ -130,7 +157,9 @@ for (const project of projects) {
       <h1>${escape(project.title)}</h1>
       <p class="project-meta">${escape(project.date)}${topics.length ? ` <span aria-hidden="true">·</span> ${topics.map(escape).join(' / ')}` : ''}</p>
       ${project.summary ? `<p class="project-summary">${escape(project.summary)}</p>` : ''}
+      ${leadFigure ? projectFigure(leadFigure, base, true) : ''}
       <div class="prose">${paragraphs(project.description)}</div>
+      ${moreFigures.map((figure) => projectFigure(figure, base)).join('\n')}
       ${project.links?.length ? `<div class="project-links">${project.links.map(([label, url]) => link(label, url, base)).join('\n')}</div>` : ''}
     </article>`
   })]);

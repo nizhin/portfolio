@@ -1,5 +1,121 @@
 [
   {
+    "title": "Generating MNIST Digits with Flow Matching",
+    "slug": "mnist-flow-matching",
+    "date": "2026",
+    "featured": false,
+    "summary": "A generative model that learns to turn random noise into handwritten digits.",
+    "topics": ["Generative Modeling", "PyTorch", "Flow Matching"],
+    "links": [
+      ["Report", "/project-media/mnist-flow-matching/mnist-flow-matching-report.pdf"]
+    ],
+    "description": [
+      "I first tested flow matching on eight clusters of points in two dimensions to see how the model moved noise toward the target distribution. I then adapted the course-provided U-Net to generate MNIST digits and compared Euler and Heun sampling at different step counts.",
+      "For the final model, I chose 50-step Heun sampling to balance recognition and runtime. On 2,000 unfiltered samples, the course classifier assigned a digit with more than 99% confidence to 90.9% of the images. Its predictions covered all ten digits."
+    ],
+    "figures": [
+      {
+        "caption": "50 images randomly selected from the final set of 2,000 generated samples, without filtering or sorting by digit.",
+        "images": [
+          {
+            "src": "/project-media/mnist-flow-matching/generated-digits.png",
+            "alt": "Grid of 50 generated white handwritten digits on black tiles, including a few ambiguous shapes.",
+            "width": 625,
+            "height": 320
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Panorama Stitching from Overlapping Photos",
+    "slug": "panorama-stitching",
+    "date": "2026",
+    "featured": true,
+    "summary": "Two overlapping photos of an atrium, aligned and stitched into one wider view.",
+    "topics": ["Computer Vision", "Python", "OpenCV"],
+    "links": [
+      ["Report", "/project-media/panorama-stitching/panorama-stitching-report.pdf"]
+    ],
+    "description": [
+      "I used OpenCV’s SIFT features to find matching points, then used RANSAC to reject unreliable matches and estimate the perspective transform. I implemented inverse warping to align the images on a shared canvas and used feather blending to soften the seam.",
+      "I tested the pipeline on photos taken by rotating the camera and on a flat wall photographed from two positions. I also tried moving the camera sideways through a scene with objects at different depths. In that case, a single transform couldn’t align the foreground and background at the same time."
+    ],
+    "figures": [
+      {
+        "layout": "comparison",
+        "caption": "I rotated the camera between the two shots. The black areas fall outside both photos after alignment.",
+        "images": [
+          {
+            "src": "/project-media/panorama-stitching/atrium-source-1.jpg",
+            "alt": "Atrium photo looking toward the tall windows and indoor garden.",
+            "label": "Photo 1",
+            "width": 510,
+            "height": 680
+          },
+          {
+            "src": "/project-media/panorama-stitching/atrium-source-2.jpg",
+            "alt": "Overlapping atrium photo looking toward the stairs and upper floors.",
+            "label": "Photo 2",
+            "width": 510,
+            "height": 680
+          },
+          {
+            "src": "/project-media/panorama-stitching/atrium-panorama.jpg",
+            "alt": "Stitched panorama spanning the atrium windows, garden, and stairs on a black canvas.",
+            "label": "Stitched panorama",
+            "width": 577,
+            "height": 559
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "title": "Text-to-Image Search with CLIP",
+    "slug": "clip-image-search",
+    "date": "2026",
+    "featured": false,
+    "summary": "A search interface that finds photos in a small collection from a written description.",
+    "topics": ["Computer Vision", "CLIP", "Python", "Gradio"],
+    "links": [
+      ["Report", "/project-media/clip-image-search/clip-image-search-report.pdf"]
+    ],
+    "description": [
+      "I used pretrained CLIP to encode a collection of 20 photos and rank them by cosine similarity to a text query. I cached the photo embeddings so each search only had to encode the query and score the existing vectors.",
+      "I built a Gradio interface that lets users enter a description and choose how many ranked results to see. I also compared query phrasings and examined close matches, like the apple slices ranked third for the banana query."
+    ],
+    "figures": [
+      {
+        "title": "Query: “a bunch of bananas”",
+        "caption": "The saved search ranked both banana photos ahead of the apple slices. The numbers are cosine similarity scores.",
+        "images": [
+          {
+            "src": "/project-media/clip-image-search/banana-bunch.jpg",
+            "alt": "First result: a bunch of bananas on a dark countertop.",
+            "label": "#1 · 0.305",
+            "width": 450,
+            "height": 600
+          },
+          {
+            "src": "/project-media/clip-image-search/single-banana.jpg",
+            "alt": "Second result: a single banana on a dark countertop.",
+            "label": "#2 · 0.279",
+            "width": 450,
+            "height": 600
+          },
+          {
+            "src": "/project-media/clip-image-search/apple-slices.jpg",
+            "alt": "Third result: apple slices on a dark plate.",
+            "label": "#3 · 0.236",
+            "width": 450,
+            "height": 600
+          }
+        ]
+      }
+    ]
+  },
+  {
     "title": "Multi-Dialect Vietnamese Text to Speech",
     "links": [
       [

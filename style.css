@@ -83,6 +83,16 @@ p { margin: 0 0 17px; }
 .project-detail h1 { margin-bottom: 13px; max-width: 590px; }
 .project-meta { color: var(--muted); font-size: 13px; margin-bottom: 31px; }
 .project-meta span { margin: 0 6px; }
+.project-figure { margin: 0 0 30px; }
+.project-detail .prose + .project-figure { margin-top: 36px; }
+.project-figure h2 { margin-bottom: 14px; }
+.figure-images { display: grid; gap: 10px; align-items: center; }
+.figure-images--2 { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+.figure-images--3 { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+.figure-images--comparison { grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 2.1fr); }
+.figure-image span { display: block; margin-bottom: 5px; color: var(--muted); font-size: 12px; }
+.figure-image img { display: block; width: 100%; height: auto; border: 1px solid var(--rule); border-radius: 3px; }
+.project-figure figcaption { margin-top: 10px; color: var(--muted); font-size: 13px; }
 .project-links { display: flex; flex-wrap: wrap; gap: 10px 24px; margin-top: 26px; font-size: 14px; }
 footer { margin-top: 66px; padding: 24px 0 36px; border-top: 1px solid var(--rule); color: var(--muted); font-size: 12px; }
 .footer-links { display: flex; gap: 22px; margin-bottom: 13px; }
@@ -99,5 +109,7 @@ footer p { margin: 0; }
   .selected-work { margin-top: 42px; }
   .project-list a { gap: 16px; padding: 12px 0; }
   .section-heading { gap: 12px; }
+  .figure-images--comparison { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .figure-images--comparison > :last-child { grid-column: 1 / -1; }
   footer { margin-top: 48px; }
 }

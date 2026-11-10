@@ -13,7 +13,7 @@ Run the build again and refresh the browser after edits. `PORT` can override the
 - `data/site.json` contains the home introduction, portrait, full biography, contact details, resume link, and project-list introduction.
 - `data/projects.json` contains projects in display order. Featured entries also appear on Home.
 - `data/work.json` contains experience entries in display order.
-- `public/` holds files such as the portrait, resume, and project reports. Project images are not displayed.
+- `public/` holds files such as the portrait, resume, project figures, and reports.
 - `build.mjs` generates home, projects, about, and individual project pages.
 - `style.css` controls the layout and typography.
 - `dist/` is the generated static website. It works at a domain root or under a path such as `/portfolio/`.
@@ -47,7 +47,9 @@ Only `title`, `date`, and a nonempty `description` array are required. `featured
 
 Use a unique `slug` with lowercase letters, numbers, and hyphens. Keep it unchanged when renaming a project so existing links keep working. If omitted, the slug is generated from the title. The build checks for duplicate or invalid slugs before replacing generated pages.
 
-Put downloadable files in `public/`, then use a path such as `/my-project-report.pdf`. Local links automatically work from nested pages and under a deployment path. No image field is needed.
+Put downloadable files in `public/`, then use a path such as `/my-project-report.pdf`. Local links automatically work from nested pages and under a deployment path.
+
+To show images on a project page, add a `figures` array. Each figure has a `caption` and one to three `images` with a local `src`, descriptive `alt`, and pixel `width` and `height`. Optional fields are `title` on the figure and `label` on each image. The first figure goes above the description and the rest follow it. Set `layout` to `comparison` for two input images and a larger result. See the panorama project for an example.
 
 Run `npm run build` and refresh the preview. The project list, individual page, and featured list update automatically. Do not edit `dist/` directly; the next build replaces it.
 
